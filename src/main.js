@@ -459,7 +459,7 @@ function renderCitation() {
   return `
     <section class="citation">
       <div class="citation__container">
-        <div class="citation__marks"><img src="/assets/quotation-marks-new.png" alt="" /></div>
+        <div class="citation__marks"><img src="${A}/quotation-marks-new.png" alt="" /></div>
         <p class="citation__text">Insérer une citation ou texte</p>
         <div class="citation__attribution">
           <div class="citation__line"></div>
