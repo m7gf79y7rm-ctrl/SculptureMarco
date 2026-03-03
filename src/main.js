@@ -334,7 +334,7 @@ function renderCardImportant({ image, title, href = '#', scrollTarget = '' }) {
 function renderProjetImportant() {
   const cards = [
     { image: IMG_PI_ETOILE, title: 'Étoile BELAIR-67', scrollTarget: 'section-etoile' },
-    { image: IMG_PI_MAISON, title: "L'Occasion des cauchemars", scrollTarget: 'section-maison' },
+    { image: IMG_PI_MAISON, title: "La Caserne des cauchemars", scrollTarget: 'section-maison' },
     { image: IMG_PI_HOMME, title: "Karma", scrollTarget: 'section-homme' },
     { image: IMG_PI_PAPA_MAMAN, title: 'Papa et Maman en 1967', scrollTarget: 'carousel-animation' },
   ];
@@ -498,23 +498,23 @@ function renderSectionMaison() {
     <section class="section-maison" id="section-maison">
       <div class="section-maison__container">
         <div class="section-maison__title">
-          ${gradientTitle('L'Occasion des cauchemars', 'light')}
+          ${gradientTitle('La Caserne des cauchemars', 'light')}
         </div>
         <div class="section-maison__grid">
           <div class="section-maison__col section-maison__col--left">
-            ${imgBaked(IMG_MAISON_1, 'L'Occasion des cauchemars 1', '', 'style="width:299px;margin-bottom:-52px"')}
-            ${imgBaked(IMG_MAISON_2, 'L'Occasion des cauchemars 2', '', 'style="width:365px;margin-bottom:-52px"')}
-            ${imgBaked(IMG_MAISON_3, 'L'Occasion des cauchemars 3', '', 'style="width:243px"')}
+            ${imgBaked(IMG_MAISON_1, 'La Caserne des cauchemars 1', '', 'style="width:299px;margin-bottom:-52px"')}
+            ${imgBaked(IMG_MAISON_2, 'La Caserne des cauchemars 2', '', 'style="width:365px;margin-bottom:-52px"')}
+            ${imgBaked(IMG_MAISON_3, 'La Caserne des cauchemars 3', '', 'style="width:243px"')}
           </div>
           <div class="section-maison__col section-maison__col--center">
-            ${imgBaked(IMG_MAISON_4, 'L'Occasion des cauchemars 4', '', 'style="width:338px;margin-bottom:-20px"')}
-            ${imgBaked(IMG_MAISON_5, 'L'Occasion des cauchemars 5', '', 'style="width:471px;margin-bottom:-20px"')}
+            ${imgBaked(IMG_MAISON_4, 'La Caserne des cauchemars 4', '', 'style="width:338px;margin-bottom:-20px"')}
+            ${imgBaked(IMG_MAISON_5, 'La Caserne des cauchemars 5', '', 'style="width:471px;margin-bottom:-20px"')}
             <div style="height:100px"></div>
           </div>
           <div class="section-maison__col section-maison__col--right">
-            ${imgFrame(IMG_PI_MAISON, 'L'Occasion des cauchemars', 'img-frame--lynch-light', 'style="width:426px;height:443px"')}
-            ${imgBaked(IMG_MAISON_6, 'L'Occasion des cauchemars 6', '', 'style="width:316px;margin-bottom:-76px;z-index:2;position:relative"')}
-            ${imgBaked(IMG_MAISON_7, 'L'Occasion des cauchemars 7', '', 'style="width:265px"')}
+            ${imgFrame(IMG_PI_MAISON, 'La Caserne des cauchemars', 'img-frame--lynch-light', 'style="width:426px;height:443px"')}
+            ${imgBaked(IMG_MAISON_6, 'La Caserne des cauchemars 6', '', 'style="width:316px;margin-bottom:-76px;z-index:2;position:relative"')}
+            ${imgBaked(IMG_MAISON_7, 'La Caserne des cauchemars 7', '', 'style="width:265px"')}
           </div>
         </div>
       </div>
