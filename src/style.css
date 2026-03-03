@@ -1152,7 +1152,7 @@ h6 {
 }
 
 /* =============================================
-   SECTION 3 — LA CHUTE DES CUBES
+   SECTION 3 — CUBES
    ============================================= */
 .chute {
     background: linear-gradient(to bottom, var(--color-lynch-lighter) 35%, white);
@@ -1277,7 +1277,7 @@ h6 {
 }
 
 /* =============================================
-   SECTION 5 — LE SERPENT + MOTS ARTISTIQUES
+   SECTION 5 — T-REX LOCAL + MOTS ARTISTIQUES
    ============================================= */
 .serpent-mots {
     background-color: #e1e5ea;
@@ -1369,7 +1369,7 @@ h6 {
 }
 
 /* =============================================
-   SECTION 7 — SECTION L'HOMME
+   SECTION 7 — SECTION KARMA
    ============================================= */
 .section-homme {
     background: white;
@@ -1624,7 +1624,7 @@ h6 {
 }
 
 /* =============================================
-   SECTION 10 — GALLERY LA MAISON
+   SECTION 10 — GALLERY LA CASERNE DES CAUCHEMARS
    ============================================= */
 .section-maison {
     background: white;

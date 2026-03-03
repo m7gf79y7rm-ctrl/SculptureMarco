@@ -28,14 +28,14 @@ const IMG_SERPENT_1 = `${A}/Le serpent 1 [].png`;
 // Galerie vivante (medium cards)
 const galerieVivanteItems = [
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Don Quichotte.png`, title: 'Don Quichotte' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete 1.png`, title: 'Spirale tête 1' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Terre en Cage.png`, title: 'Terre en cage' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Pierre en cage.png`, title: 'Pierre en cage' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale Blanche.11.png`, title: 'Spirale blanche' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Roche sur canettes.png`, title: 'Roche sur canettes' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chute du mur .png`, title: 'Chute du mur' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Triangle triangulaire.png`, title: 'Triangle triangulaire' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Cube penche.png`, title: 'Cube penché' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete 1.png`, title: 'Fée des glaces' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Terre en Cage.png`, title: 'Migrants du Cosmos' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Pierre en cage.png`, title: 'Liberté' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale Blanche.11.png`, title: 'Curiosité' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Roche sur canettes.png`, title: "L'île morte" },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chute du mur .png`, title: 'Tsunami du Covid' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Triangle triangulaire.png`, title: 'Techno-plante' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Cube penche.png`, title: 'Monolithe' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chien Fou.png`, title: 'Le chien fou' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Maman .png`, title: 'Maman' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Manifs des carrés rouges.png`, title: 'La Manifs des cubes rouges' },
@@ -241,7 +241,7 @@ function renderHero() {
             <div class="hero__author">Marc Plamondon</div>
           </div>
           <div class="hero__image-group">
-            ${imgFrame(IMG_LE_PAN, 'Le pan', 'hero__le-pan')}
+            ${imgFrame(IMG_LE_PAN, 'Grande hermine', 'hero__le-pan')}
             <div class="hero__title-bar">Le pan</div>
           </div>
         </div>
@@ -299,14 +299,14 @@ function renderChuteDesCubes() {
     <section class="chute">
       <div class="chute__container">
         <div class="chute__left">
-          ${imgFrame(IMG_CHUTE, 'La chute des cubes', 'chute__img1')}
-          ${imgBaked(IMG_CHUTE_2, 'La chute des cubes 2', 'chute__img2')}
+          ${imgFrame(IMG_CHUTE, 'Cubes', 'chute__img1')}
+          ${imgBaked(IMG_CHUTE_2, 'Cubes 2', 'chute__img2')}
         </div>
         <div class="chute__right">
           <div class="chute__title-bar">
             ${gradientTitle('Cubes', 'pale')}
           </div>
-          ${imgFrame(IMG_CHUTE_1, 'La chute des cubes 1', 'chute__main-img img-frame--lynch-light')}
+          ${imgFrame(IMG_CHUTE_1, 'Cubes 1', 'chute__main-img img-frame--lynch-light')}
         </div>
       </div>
     </section>`;
@@ -333,9 +333,9 @@ function renderCardImportant({ image, title, href = '#', scrollTarget = '' }) {
 
 function renderProjetImportant() {
   const cards = [
-    { image: IMG_PI_ETOILE, title: 'Étoile et auto', scrollTarget: 'section-etoile' },
+    { image: IMG_PI_ETOILE, title: 'Étoile BELAIR-67', scrollTarget: 'section-etoile' },
     { image: IMG_PI_MAISON, title: 'Maison', scrollTarget: 'section-maison' },
-    { image: IMG_PI_HOMME, title: "L'Homme", scrollTarget: 'section-homme' },
+    { image: IMG_PI_HOMME, title: "Karma", scrollTarget: 'section-homme' },
     { image: IMG_PI_PAPA_MAMAN, title: 'Papa et Maman en 1967', scrollTarget: 'carousel-animation' },
   ];
 
@@ -370,10 +370,10 @@ function renderSerpentEtMots() {
         </div>
         <div class="serpent-mots__right">
             <div class="serpent-mots__title-bar">
-            ${gradientTitle('Le serpent', 'pale')}
+            ${gradientTitle('T-rex local', 'pale')}
             </div>
             <div class="serpent-mots__images">
-            ${imgBaked(IMG_SERPENT_1, 'Le serpent détail', 'serpent-mots__img-main')}
+            ${imgBaked(IMG_SERPENT_1, 'T-rex local détail', 'serpent-mots__img-main')}
             </div>
         </div>
       </div>
@@ -431,18 +431,18 @@ function renderSectionHomme() {
     <section class="section-homme" id="section-homme">
       <div class="section-homme__container">
         <div class="section-homme__col-left">
-          ${imgBaked(IMG_HOMME_1, "L'homme 1", 'section-homme__img1')}
-          ${imgBaked(IMG_HOMME_2, "L'homme 2", 'section-homme__img2')}
+          ${imgBaked(IMG_HOMME_1, "Karma 1", 'section-homme__img1')}
+          ${imgBaked(IMG_HOMME_2, "Karma 2", 'section-homme__img2')}
         </div>
         <div class="section-homme__col-center">
           <div class="section-homme__title-bar">
-            ${gradientTitle("L'Homme", 'light')}
+            ${gradientTitle("Karma", 'light')}
           </div>
-          ${imgFrame(IMG_HOMME_3, "L'homme 3", 'section-homme__img3')}
+          ${imgFrame(IMG_HOMME_3, "Karma 3", 'section-homme__img3')}
         </div>
         <div class="section-homme__col-right">
-          ${imgBaked(IMG_HOMME_4, "L'homme 4", 'section-homme__img4')}
-          ${imgBaked(IMG_HOMME_5, "L'homme 5", 'section-homme__img5')}
+          ${imgBaked(IMG_HOMME_4, "Karma 4", 'section-homme__img4')}
+          ${imgBaked(IMG_HOMME_5, "Karma 5", 'section-homme__img5')}
         </div>
       </div>
     </section>`;
@@ -457,15 +457,15 @@ function renderSectionEtoile() {
       <div class="section-etoile__container">
         <div class="section-etoile__left">
           <div class="section-etoile__title-bar">
-            ${gradientTitle("L'étoile et l'auto", 'dark')}
+            ${gradientTitle("Étoile BELAIR-67", 'dark')}
           </div>
-          ${imgFrame(IMG_PI_ETOILE, "L'étoile et l'auto", 'section-etoile__main-img img-frame--lynch')}
+          ${imgFrame(IMG_PI_ETOILE, "Étoile BELAIR-67", 'section-etoile__main-img img-frame--lynch')}
         </div>
         <div class="section-etoile__right">
-          ${imgBaked(IMG_ETOILE_1, "L'étoile et l'auto détail 1", 'section-etoile__detail1')}
+          ${imgBaked(IMG_ETOILE_1, "Étoile BELAIR-67 détail 1", 'section-etoile__detail1')}
           <div class="section-etoile__detail2-group">
             <div class="section-etoile__spacer"></div>
-            ${imgBaked(IMG_ETOILE_2, "L'étoile et l'auto détail 2", 'section-etoile__detail2')}
+            ${imgBaked(IMG_ETOILE_2, "Étoile BELAIR-67 détail 2", 'section-etoile__detail2')}
           </div>
         </div>
       </div>
@@ -498,23 +498,23 @@ function renderSectionMaison() {
     <section class="section-maison" id="section-maison">
       <div class="section-maison__container">
         <div class="section-maison__title">
-          ${gradientTitle('La maison', 'light')}
+          ${gradientTitle('La Caserne des cauchemars', 'light')}
         </div>
         <div class="section-maison__grid">
           <div class="section-maison__col section-maison__col--left">
-            ${imgBaked(IMG_MAISON_1, 'La maison 1', '', 'style="width:299px;margin-bottom:-52px"')}
-            ${imgBaked(IMG_MAISON_2, 'La maison 2', '', 'style="width:365px;margin-bottom:-52px"')}
-            ${imgBaked(IMG_MAISON_3, 'La maison 3', '', 'style="width:243px"')}
+            ${imgBaked(IMG_MAISON_1, 'La Caserne des cauchemars 1', '', 'style="width:299px;margin-bottom:-52px"')}
+            ${imgBaked(IMG_MAISON_2, 'La Caserne des cauchemars 2', '', 'style="width:365px;margin-bottom:-52px"')}
+            ${imgBaked(IMG_MAISON_3, 'La Caserne des cauchemars 3', '', 'style="width:243px"')}
           </div>
           <div class="section-maison__col section-maison__col--center">
-            ${imgBaked(IMG_MAISON_4, 'La maison 4', '', 'style="width:338px;margin-bottom:-20px"')}
-            ${imgBaked(IMG_MAISON_5, 'La maison 5', '', 'style="width:471px;margin-bottom:-20px"')}
+            ${imgBaked(IMG_MAISON_4, 'La Caserne des cauchemars 4', '', 'style="width:338px;margin-bottom:-20px"')}
+            ${imgBaked(IMG_MAISON_5, 'La Caserne des cauchemars 5', '', 'style="width:471px;margin-bottom:-20px"')}
             <div style="height:100px"></div>
           </div>
           <div class="section-maison__col section-maison__col--right">
-            ${imgFrame(IMG_PI_MAISON, 'La maison', 'img-frame--lynch-light', 'style="width:426px;height:443px"')}
-            ${imgBaked(IMG_MAISON_6, 'La maison 6', '', 'style="width:316px;margin-bottom:-76px;z-index:2;position:relative"')}
-            ${imgBaked(IMG_MAISON_7, 'La maison 7', '', 'style="width:265px"')}
+            ${imgFrame(IMG_PI_MAISON, 'La Caserne des cauchemars', 'img-frame--lynch-light', 'style="width:426px;height:443px"')}
+            ${imgBaked(IMG_MAISON_6, 'La Caserne des cauchemars 6', '', 'style="width:316px;margin-bottom:-76px;z-index:2;position:relative"')}
+            ${imgBaked(IMG_MAISON_7, 'La Caserne des cauchemars 7', '', 'style="width:265px"')}
           </div>
         </div>
       </div>
