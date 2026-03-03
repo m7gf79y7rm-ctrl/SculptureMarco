@@ -23,7 +23,7 @@ const galleryItems = [
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Triangle triangulaire.png`, title: 'Techno-plante' },
   { image: `${A}/Acceuil - Projet important - Section L'etoile et l'auto  - Gallerie - Étoile et auto .png`, title: 'Étoile BELAIR-67' },
   { image: `${A}/Acceuil - Projet important - section L'homme  - Gallerie - L'homme.png`, title: 'Karma' },
-  { image: `${A}/Acceuil - Projet important - section La maison  - Gallerie - La maison.png.png`, title: 'La Caserne des cauchemars' },
+  { image: `${A}/Acceuil - Projet important - section La maison  - Gallerie - La maison.png.png`, title: 'L'Occasion des cauchemars' },
   { image: `${A}/Acceuil - Section Le serpent  - Gallerie - Le serpent .png`, title: 'T-rex local' },
   { image: `${A}/Acceuil - section la chute des cubes  - Gallerie - La chute des cubes.png`, title: 'Cubes' },
   { image: `${A}/Gallerie - Cube en gravite.jpeg`, title: 'Hommage à Spinoza' },
