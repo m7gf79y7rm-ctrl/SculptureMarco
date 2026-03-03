@@ -373,7 +373,7 @@ h6 {
 .footer__top {
     display: flex;
     align-items: center;
-    gap: var(--space-4xl);
+    gap: var(--space-2xl);
     margin-bottom: var(--space-xl);
 }
 
@@ -394,7 +394,7 @@ h6 {
 .footer__links {
     display: flex;
     align-items: center;
-    gap: var(--space-xl);
+    gap: var(--space-m);
 }
 
 .footer__links a {
@@ -436,16 +436,17 @@ h6 {
 }
 
 .footer__sculpture {
-    width: 270px;
+    width: 380px;
     flex-shrink: 0;
-    align-self: stretch;
+    align-self: center;
     overflow: hidden;
+    display: flex;
 }
 
 .footer__sculpture img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Footer — Mobile */
@@ -478,6 +479,12 @@ h6 {
     .footer__sculpture {
         width: 100%;
         height: 250px;
+    }
+
+    .footer__sculpture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -590,6 +597,55 @@ h6 {
     stroke: var(--color-white);
 }
 
+/* ── Card Small (Petites Sculptures) ── */
+.card--small {
+    width: 330px;
+    height: 356px;
+    background-color: var(--color-white);
+    border: 12px solid var(--color-white);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card--small .card__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card--small__bottom-bar {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(32, 38, 45, 0) 0%, rgba(32, 38, 45, 0.8) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 60px 16px 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+}
+
+.card--small__title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-white);
+    letter-spacing: normal;
+    margin: 0;
+    text-transform: none;
+    font-weight: 400;
+    text-align: left;
+}
+
 /* ── Card Medium — No interaction ── */
 .card--medium {
     width: 526px;
@@ -629,21 +685,36 @@ h6 {
 /* ── Card Gallery ── */
 .card--gallery {
     width: 100%;
-    /* In grid, width is controlled by column */
-    height: 400px;
-    /* Default height */
-    padding: 10px 20px;
+    /* Width is controlled by column */
+    height: auto;
+    /* Adjusted to auto to respect original image proportions */
+    padding: 0;
     cursor: pointer;
-    /* Ensure content is at the bottom */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    /* Ensure image defines space */
+    display: block;
+}
+
+.card--gallery .card__image {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.card--gallery .card__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    /* Put padding back into content to avoid cropping image bounds */
+    z-index: 2;
 }
 
 .card--gallery .card__title {
-    font-size: var(--text-h3-desktop);
+    font-size: calc(var(--text-h3-desktop) * 0.75);
     font-family: 'Gloock', serif;
-    letter-spacing: 4.8px;
+    letter-spacing: 3.6px;
     color: var(--color-white);
     margin-bottom: 0;
     /* Ensure text is above overlay if needed, but z-index handles it */
@@ -686,10 +757,6 @@ h6 {
     transform: rotate(45deg);
 }
 
-.card--gallery:hover .card__arrow-icon {
-    /* If arrow icon is inside container, just handle container rotation */
-}
-
 /* ── Cards Responsive ── */
 @media (max-width: 767px) {
     .card--medium {
@@ -712,11 +779,11 @@ h6 {
 
     .card--gallery {
         width: 100%;
-        height: 520px;
+        height: auto;
     }
 
     .card--gallery .card__title {
-        font-size: var(--text-h3-mobile);
+        font-size: calc(var(--text-h3-mobile) * 0.75);
     }
 }
 
@@ -1035,14 +1102,14 @@ h6 {
 
 .gallery-preview__grid {
     position: relative;
-    height: 656px;
+    height: clamp(426px, 63.8vw, 766px);
 }
 
 .gallery-preview__row {
     display: flex;
-    gap: 16px;
+    gap: min(16px, 1.3vw);
     position: absolute;
-    height: 320px;
+    height: clamp(205px, 31.2vw, 375px);
     width: max-content;
     /* Allow row to expand for all images */
 }
@@ -1054,7 +1121,7 @@ h6 {
 }
 
 .gallery-preview__row--bottom {
-    top: 336px;
+    top: calc(clamp(205px, 31.2vw, 375px) + min(16px, 1.3vw));
     left: 0;
     animation: scroll-right 300s linear infinite;
 }
@@ -1080,8 +1147,8 @@ h6 {
 }
 
 .gallery-preview__img {
-    width: 416px;
-    height: 320px;
+    width: clamp(150px, 22.8vw, 274px);
+    height: clamp(205px, 31.2vw, 375px);
 }
 
 /* =============================================
@@ -1096,9 +1163,13 @@ h6 {
 .chute__container {
     display: flex;
     align-items: center;
-    height: 900px;
+    justify-content: space-between;
+    gap: 40px;
+    height: auto;
+    min-height: 900px;
     max-width: var(--page-max-width);
     margin: 0 auto;
+    padding: 80px 0;
 }
 
 .chute__left {
@@ -1106,23 +1177,31 @@ h6 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 640px;
-    height: 100%;
+    width: 45%;
+    max-width: 640px;
     flex-shrink: 0;
     position: relative;
 }
 
 .chute__img1 {
-    width: 509px;
-    height: 319px;
+    width: 100%;
+    max-width: 407px;
+    height: auto;
     z-index: 2;
 }
 
+.chute__img1 img {
+    position: relative;
+    height: auto;
+    display: block;
+}
+
 .chute__img2 {
-    width: 505px;
-    height: 379px;
+    width: 100%;
+    max-width: 505px;
+    height: auto;
     margin-top: -38px;
-    margin-left: 75px;
+    margin-left: 15%;
     z-index: 1;
 }
 
@@ -1133,20 +1212,27 @@ h6 {
 .chute__right {
     display: flex;
     flex-direction: column;
-    gap: 95px;
+    gap: 40px;
     align-items: flex-end;
     justify-content: center;
-    height: 100%;
+    min-width: 0;
     flex: 1;
 }
 
 .chute__title-bar {
-    width: 640px;
+    width: 75%;
+    max-width: 575px;
+}
+
+.chute__title-bar .gradient-title {
+    justify-content: flex-end;
 }
 
 .chute__main-img {
-    width: 766px;
-    height: 638px;
+    width: 100%;
+    max-width: 766px;
+    height: auto;
+    aspect-ratio: 766/638;
 }
 
 .chute__main-img.img-frame--lynch-light {
@@ -1194,132 +1280,47 @@ h6 {
    SECTION 5 — LE SERPENT + MOTS ARTISTIQUES
    ============================================= */
 .serpent-mots {
-    background: white;
-    /* spacing using padding for white background */
+    background-color: #e1e5ea;
     padding: 112px 0;
     margin: 0;
-    /* tall enough to scroll through */
-    min-height: 250vh;
     position: relative;
 }
 
-.serpent-mots__sticky-content {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100%;
+.serpent-mots__container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 120px;
-    /* Reduced gap slightly to ensure fit */
-    overflow: hidden;
-    /* Ensure nothing spills out during scroll */
     padding: 0 var(--page-padding);
+    max-width: var(--page-max-width);
+    margin: 0 auto;
 }
 
-/* Container for the words */
-.serpent-mots__words {
+.serpent-mots__quote-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    font-family: var(--font-heading);
-    font-size: var(--text-h2-desktop);
-    letter-spacing: 6px;
-    line-height: 1.2;
-    text-align: center;
-    padding-left: 0;
-    /* Centered in its column */
+    width: 480px;
+    background-color: transparent;
+    padding: 60px 40px;
     flex-shrink: 0;
-    width: 300px;
-    /* Give it a fixed width to be stable */
 }
 
-/* Invisible spacers to create scroll distance */
-.snake-spacers {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    pointer-events: none;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.snake-spacer {
-    flex: 1;
-    /* Divide total height equally */
-    width: 100%;
-    border: 1px solid red;
-    /* Debugging - remove later */
-}
-
-/* Make the parent section tall enough to allow scrolling */
-.serpent-mots {
-    /* ... existing props ... */
-    /* increasing height to allow for "scrolling through" the words */
-    min-height: 250vh;
-    align-items: flex-start;
-    /* Align formatting to top so sticky works */
-}
-
-.serpent-mots__word--1 {
-    color: #2b333c;
-}
-
-.serpent-mots__word--2 {
-    color: #576778;
-}
-
-.serpent-mots__word--3 {
-    color: #6d8196;
-}
-
-.serpent-mots__word--4 {
-    color: #98a6b5;
-}
-
-/* Snake Section Scroll Animations */
-.serpent-mots__word--1,
-.serpent-mots__word--2,
-.serpent-mots__word--3,
-.serpent-mots__word--4 {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-out;
-}
-
-.animate-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-.serpent-mots__word--1.animate-in {
-    transition-delay: 0.1s;
-}
-
-.serpent-mots__word--2.animate-in {
-    transition-delay: 0.3s;
-}
-
-.serpent-mots__word--3.animate-in {
-    transition-delay: 0.5s;
-}
-
-.serpent-mots__word--4.animate-in {
-    transition-delay: 0.7s;
+.serpent-mots__quote-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
 }
 
 .serpent-mots__right {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border-bottom: 1px solid var(--color-lynch-light);
-    border-right: 1px solid var(--color-lynch-light);
+    gap: 20px;
     flex-shrink: 0;
 }
 
@@ -1329,25 +1330,14 @@ h6 {
 
 .serpent-mots__images {
     position: relative;
-    width: 560px;
-    height: 500px;
-    padding-right: 39px;
+    width: 360px;
+    height: auto;
 }
 
 .serpent-mots__img-main {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 365px;
-    height: 500px;
-}
-
-.serpent-mots__img-detail {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 234px;
-    height: 312px;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 /* =============================================
@@ -1397,19 +1387,19 @@ h6 {
 .section-homme__col-left {
     display: flex;
     flex-direction: column;
-    width: 429px;
+    width: 380px;
     flex-shrink: 0;
 }
 
 .section-homme__img1 {
-    width: 532px;
-    height: 708px;
+    width: 452px;
+    height: 602px;
     z-index: 1;
 }
 
 .section-homme__img2 {
-    width: 378px;
-    height: 378px;
+    width: 321px;
+    height: 321px;
     margin-top: -32px;
     z-index: 2;
 }
@@ -1420,7 +1410,7 @@ h6 {
     gap: 110px;
     align-items: flex-start;
     justify-content: center;
-    width: 424px;
+    width: 470px;
     padding-top: 100px;
     flex-shrink: 0;
 }
@@ -1432,8 +1422,16 @@ h6 {
 }
 
 .section-homme__img3 {
-    width: 376px;
-    height: 376px;
+    width: 470px;
+    height: auto;
+    z-index: 10;
+    filter: brightness(1.15);
+}
+
+.section-homme__img3 img {
+    position: relative;
+    height: auto;
+    display: block;
 }
 
 .section-homme__col-right {
@@ -1446,13 +1444,13 @@ h6 {
 }
 
 .section-homme__img4 {
-    width: 100%;
-    height: 420px;
+    width: 85%;
+    height: 357px;
 }
 
 .section-homme__img5 {
-    width: 339px;
-    height: 574px;
+    width: 288px;
+    height: 488px;
 }
 
 .section-homme__img5.img-frame--lynch-lighter {
@@ -1563,27 +1561,31 @@ h6 {
 
 .citation__text {
     font-family: var(--font-heading);
-    font-size: 60px;
+    font-size: 1.5rem;
+    /* ~24px */
     /* Desktop size */
-    line-height: 1.2;
+    line-height: 1.6;
     text-align: center;
-    letter-spacing: 6px;
+    letter-spacing: 2px;
     color: black;
     margin: 0;
-    max-width: 768px;
+    max-width: 800px;
+    /* Reduced margin behavior by containing it nicely */
 }
 
 .citation__attribution {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    /* Center correctly since lines give distance */
+    gap: 20px;
     width: 100%;
-    max-width: 763px;
     margin-top: 0;
 }
 
 .citation__line {
-    width: 148px;
+    width: 60px;
+    /* Shorter line to give text more space */
     height: 1px;
     background-color: #535353;
     flex-shrink: 0;
@@ -1591,10 +1593,13 @@ h6 {
 
 .citation__author {
     font-family: var(--font-heading);
-    font-size: 40px;
+    font-size: 1rem;
+    /* ~16px, matching ratio 40:60 -> 16:24 */
     color: #535353;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     text-align: center;
+    white-space: nowrap;
+    /* Prevent breaking lines */
 }
 
 /* Responsive adjustments */
@@ -1680,6 +1685,10 @@ h6 {
     background: linear-gradient(to right, var(--color-lynch-lighter), white, var(--color-lynch-lighter));
 }
 
+.separation--white {
+    background: white;
+}
+
 /* =============================================
    SECTION 11 — PETITES SCULPTURES (SLIDER)
    ============================================= */
@@ -1716,11 +1725,6 @@ h6 {
     padding-left: calc(50% - 346px);
 }
 
-.petites-sculptures .img-frame {
-    width: 330px;
-    height: 356px;
-    flex-shrink: 0;
-}
 
 .petites-sculptures .slider__arrow {
     width: 48px;
@@ -1827,14 +1831,17 @@ h6 {
 
     .chute__left {
         width: 100%;
+        max-width: none;
     }
 
     .chute__right {
+        width: 100%;
         align-items: flex-start;
     }
 
     .chute__title-bar {
-        width: 100%;
+        width: 75%;
+        max-width: none;
     }
 
     .chute__main-img {
@@ -1886,23 +1893,7 @@ h6 {
         width: 100% !important;
     }
 
-    .gallery-preview__grid {
-        height: auto;
-    }
 
-    .gallery-preview__row {
-        position: relative;
-        left: 0 !important;
-        top: auto !important;
-        flex-wrap: wrap;
-        height: auto;
-    }
-
-    .gallery-preview__img {
-        width: calc(50% - 8px);
-        height: auto;
-        aspect-ratio: 416/320;
-    }
 
     .en-pleine-nature__grid {
         flex-direction: column;
@@ -2054,9 +2045,6 @@ h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Special positioning from design */
-    transform: scale(1.6);
-    transform-origin: center;
 }
 
 .bibliographie__text {
@@ -2279,4 +2267,101 @@ h6 {
         /* switch to top border? or just no border */
         padding-top: 32px;
     }
+}
+
+/* =============================================
+   SECTION — CAROUSEL ANIMATION
+   ============================================= */
+.carousel-animation {
+    padding: var(--space-4xl) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.carousel-animation__header {
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 150px;
+    margin-bottom: var(--space-4xl);
+}
+
+.carousel-animation__title {
+    display: inline-block;
+    width: max-content;
+}
+
+.carousel-animation__title .gradient-title {
+    padding-right: 40px;
+}
+
+.carousel-animation__wrapper {
+    position: relative;
+    width: 682.5px;
+    height: 551.25px;
+}
+
+.carousel-animation__item {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+    background-color: var(--color-white);
+}
+
+.carousel-animation__item img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+}
+
+.carousel-animation__frame {
+    position: absolute;
+    inset: -15px;
+    border: 15px solid var(--color-white);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+.carousel-animation__arrow {
+    position: absolute;
+    top: 325px;
+    width: 60px;
+    height: 60px;
+    background-color: #e1e5ea;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    z-index: 10;
+    padding: 0;
+}
+
+.carousel-animation__arrow:focus {
+    outline: 2px solid var(--color-lynch);
+}
+
+.carousel-animation__arrow:hover {
+    background-color: #d1d5da;
+}
+
+.carousel-animation__arrow--left {
+    left: 20px;
+}
+
+.carousel-animation__arrow--right {
+    left: 602.5px;
+}
+
+.carousel-animation__arrow-icon {
+    width: 20px;
+    height: 20px;
+    fill: #0a0a0a;
 }

@@ -10,10 +10,11 @@ const IMG_LE_PAN = `${A}/Acceuil - Hero  - Gallerie - Le pan.png`;
 
 // La chute des cubes
 const IMG_CHUTE = `${A}/Acceuil - section la chute des cubes  - Gallerie - La chute des cubes.png`;
-const IMG_CHUTE_1 = `${A}/La chute des cubes 1 [].png`;
+const IMG_CHUTE_1 = `${A}/La chute des cubes 1.webp`;
 const IMG_CHUTE_2 = `${A}/La chute des cubes 2 [].png`;
 
 // Projet important cards
+const IMG_PI_PAPA_MAMAN = `${A}/Acceuil - Sculptures importantes - Papa et Maman en 1967.png`;
 const IMG_PI_ETOILE = `${A}/Acceuil - Projet important - Section L'etoile et l'auto  - Gallerie - Étoile et auto .png`;
 const IMG_ETOILE_1 = `${A}/L'étoile et l'auto 1 [].png`;
 const IMG_ETOILE_2 = `${A}/L'étoile et l'auto 2 [].png`;
@@ -27,21 +28,23 @@ const IMG_SERPENT_1 = `${A}/Le serpent 1 [].png`;
 // Galerie vivante (medium cards)
 const galerieVivanteItems = [
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Don Quichotte.png`, title: 'Don Quichotte' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete.png`, title: 'Spirale tête' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete 1.png`, title: 'Spirale tête 1' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Terre en Cage.png`, title: 'Terre en cage' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Pierre en cage.png`, title: 'Pierre en cage' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Boule de soldat.png`, title: 'Boule de soldat' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale Blanche.11.png`, title: 'Spirale blanche' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Roche sur canettes.png`, title: 'Roche sur canettes' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chute du mur .png`, title: 'Chute du mur' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Triangle triangulaire.png`, title: 'Triangle triangulaire' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Cube penche.png`, title: 'Cube penché' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chien Fou.png`, title: 'Le chien fou' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Maman .png`, title: 'Maman' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Manifs des carrés rouges.png`, title: 'La Manifs des cubes rouges' },
 ];
 
 // Section L'Homme
 const IMG_HOMME_1 = `${A}/L'homme 1 [].png`;
 const IMG_HOMME_2 = `${A}/L'homme 2 [].png`;
-const IMG_HOMME_3 = `${A}/L'homme 3 [].png`;
+const IMG_HOMME_3 = `${A}/L'homme 3.1.webp`;
 const IMG_HOMME_4 = `${A}/L'homme 4 [].png`;
 const IMG_HOMME_5 = `${A}/L'homme 5 [].png`;
 
@@ -56,13 +59,16 @@ const IMG_MAISON_7 = `${A}/La maison 7 [].png`;
 
 // Petites sculptures
 const petitesSculptures = [
+  { image: `${A}/Acceuil - Petites sculptures - origine du monde.webp`, title: 'Origine du monde', objectPosition: 'top' },
   { image: `${A}/Acceuil - Petites sculptures - Oie.png`, title: 'Oie' },
   { image: `${A}/Acceuil - Petites sculptures - Helice.jpeg`, title: 'Hélice' },
   { image: `${A}/Acceuil - Petites sculptures - Volant.jpeg`, title: 'Volant' },
   { image: `${A}/Acceuil - Petites sculptures - Face.jpeg`, title: 'Face' },
   { image: `${A}/Acceuil - Petites sculptures - Anclume.png`, title: 'Anclume' },
-  { image: `${A}/Acceuil - Petites sculptures - Pistolet.jpeg`, title: 'Pistolet' },
-  { image: `${A}/Acceuil - Petites sculptures - Abstrait.png`, title: 'Abstrait' },
+  { image: `${A}/Acceuil - Petites sculptures - Pistolet 1.1.webp`, title: 'Pistolet' },
+  { image: `${A}/Acceuil - Petites sculptures - Guerre de troie.webp`, title: 'Guerre de troie' },
+  { image: `${A}/Acceuil - Petites sculptures - Exploration.webp`, title: 'Exploration' },
+  { image: `${A}/Acceuil - Petites sculptures - Pogo.webp`, title: 'Pogo', objectPosition: '10% 50%' },
 ];
 
 // En pleine nature
@@ -76,27 +82,27 @@ const IMG_NATURE_4 = `${A}/En pleine nature 4 [].png`;
 const IMG_GAL = [
   `${A}/Acceuil - Hero  - Gallerie - Le pan.png`,
   `${A}/Gallerie - Le mur gradient.png`,
-  `${A}/Acceuil - Gallerie Vivante  - Gallerie - Boule de soldat.png`,
+  `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chien Fou.png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chute du mur .png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Cube penche.png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Don Quichotte.png`,
+  `${A}/Acceuil - Gallerie Vivante  - Gallerie - Maman .png`,
+  `${A}/Acceuil - Gallerie Vivante  - Gallerie - Manifs des carrés rouges.png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Pierre en cage.png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Roche sur canettes.png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale Blanche.11.png`,
-  `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete.png`,
+  `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete 1.png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Terre en Cage.png`,
   `${A}/Acceuil - Gallerie Vivante  - Gallerie - Triangle triangulaire.png`,
   `${A}/Acceuil - Projet important - Section L'etoile et l'auto  - Gallerie - Étoile et auto .png`,
   `${A}/Acceuil - Projet important - section L'homme  - Gallerie - L'homme.png`,
-  `${A}/Acceuil - Projet important - section La maison  - Gallerie - La maison.png.png`,
   `${A}/Acceuil - Section Le serpent  - Gallerie - Le serpent .png`,
   `${A}/Acceuil - section la chute des cubes  - Gallerie - La chute des cubes.png`,
   `${A}/Gallerie - Cube en gravite.jpeg`,
   `${A}/Gallerie - L'artefact.png`,
-  `${A}/Gallerie - L'immigrante.jpeg`,
   `${A}/Gallerie - La terre en ondulation.png`,
   `${A}/Gallerie - Le canot.png`,
-  `${A}/Gallerie - Le monstre.jpeg`,
+  `${A}/Gallerie - Jesus de Nazareth.png`,
   `${A}/Gallerie - Le pan en feuille.png`,
   `${A}/Gallerie - Le sage.png`,
   `${A}/Gallerie - Les oiseaux .jpeg`,
@@ -105,7 +111,17 @@ const IMG_GAL = [
 
 // Footer
 const IMG_LOGO = `${A}/Footer - Logo.png`;
-const IMG_FOOTER = `${A}/Footer - Jesus sculpture exterieure.png`;
+const IMG_FOOTER = `${A}/Footer - Maison du footer.jpeg`;
+
+// ══════════════════════════════════════════
+//  CAROUSEL ANIMATION IMAGES
+// ══════════════════════════════════════════
+// Using the actual project assets. The 'main' asset is placed at index 0.
+const carouselAnimationImages = [
+  `${A}/Acceuil - Papa et Maman en 1967 main .webp`,
+  `${A}/Acceuil - Papa et Maman 1967 1.webp`,
+  `${A}/Acceuil - Papa et Maman 1967 2.webp`
+];
 
 // ══════════════════════════════════════════
 //  SVG ICONS
@@ -283,12 +299,14 @@ function renderChuteDesCubes() {
     <section class="chute">
       <div class="chute__container">
         <div class="chute__left">
-          ${imgBaked(IMG_CHUTE_1, 'La chute des cubes 1', 'chute__img1')}
+          ${imgFrame(IMG_CHUTE, 'La chute des cubes', 'chute__img1')}
           ${imgBaked(IMG_CHUTE_2, 'La chute des cubes 2', 'chute__img2')}
         </div>
         <div class="chute__right">
-          ${gradientTitle('La chute des cubes ', 'pale')}
-          ${imgFrame(IMG_CHUTE, 'La chute des cubes', 'chute__main-img img-frame--lynch-light')}
+          <div class="chute__title-bar">
+            ${gradientTitle('Cubes', 'pale')}
+          </div>
+          ${imgFrame(IMG_CHUTE_1, 'La chute des cubes 1', 'chute__main-img img-frame--lynch-light')}
         </div>
       </div>
     </section>`;
@@ -318,6 +336,7 @@ function renderProjetImportant() {
     { image: IMG_PI_ETOILE, title: 'Étoile et auto', scrollTarget: 'section-etoile' },
     { image: IMG_PI_MAISON, title: 'Maison', scrollTarget: 'section-maison' },
     { image: IMG_PI_HOMME, title: "L'Homme", scrollTarget: 'section-homme' },
+    { image: IMG_PI_PAPA_MAMAN, title: 'Papa et Maman en 1967', scrollTarget: 'carousel-animation' },
   ];
 
   const cardsHTML = cards.map(c => renderCardImportant(c)).join('');
@@ -344,29 +363,19 @@ function renderProjetImportant() {
 function renderSerpentEtMots() {
   return `
     <section class="serpent-mots">
-      <div class="serpent-mots__sticky-content">
-        <div class="serpent-mots__words">
-            <p class="serpent-mots__word--1">FISSURE</p>
-            <p class="serpent-mots__word--2">FAILLE</p>
-            <p class="serpent-mots__word--3">JEUX</p>
-            <p class="serpent-mots__word--4">SCULPTURES</p>
+      <div class="serpent-mots__container">
+        <div class="serpent-mots__quote-box">
+            <div class="citation__marks"><img src="${A}/quotation-marks-new.png" alt="" /></div>
+            <p class="serpent-mots__quote-text">« Il n’y a pas de sculpture qui se contente d’être regardée : toutes nous regardent en retour et nous traversent, et, dans ce face-à-face silencieux, elles éveillent en nous des désirs, des souvenirs et des ombres que nous ignorions porter. »</p>
         </div>
         <div class="serpent-mots__right">
             <div class="serpent-mots__title-bar">
             ${gradientTitle('Le serpent', 'pale')}
             </div>
             <div class="serpent-mots__images">
-            ${imgFrame(IMG_SERPENT, 'Le serpent', 'serpent-mots__img-main img-frame--lynch-light')}
-            ${imgBaked(IMG_SERPENT_1, 'Le serpent détail', 'serpent-mots__img-detail')}
+            ${imgBaked(IMG_SERPENT_1, 'Le serpent détail', 'serpent-mots__img-main')}
             </div>
         </div>
-      </div>
-      <!-- Spacers for scroll resistance -->
-      <div class="snake-spacers">
-          <div class="snake-spacer" id="snake-spacer-1"></div>
-          <div class="snake-spacer" id="snake-spacer-2"></div>
-          <div class="snake-spacer" id="snake-spacer-3"></div>
-          <div class="snake-spacer" id="snake-spacer-4"></div>
       </div>
     </section>`;
 }
@@ -380,6 +389,17 @@ function renderCardMedium({ image, title }) {
       <img class="card__image" src="${image}" alt="${title}" />
       <div class="card__content">
         <h3 class="card__title">${title}</h3>
+      </div>
+    </div>`;
+}
+
+function renderCardSmall({ image, title, objectPosition }) {
+  const styleAttr = objectPosition ? ` style="object-position: ${objectPosition};"` : '';
+  return `
+    <div class="card card--small">
+      <img class="card__image" src="${image}" alt="${title}"${styleAttr} />
+      <div class="card--small__bottom-bar">
+        <h3 class="card--small__title">${title}</h3>
       </div>
     </div>`;
 }
@@ -418,7 +438,7 @@ function renderSectionHomme() {
           <div class="section-homme__title-bar">
             ${gradientTitle("L'Homme", 'light')}
           </div>
-          ${imgBaked(IMG_HOMME_3, "L'homme 3", 'section-homme__img3')}
+          ${imgFrame(IMG_HOMME_3, "L'homme 3", 'section-homme__img3')}
         </div>
         <div class="section-homme__col-right">
           ${imgBaked(IMG_HOMME_4, "L'homme 4", 'section-homme__img4')}
@@ -460,10 +480,10 @@ function renderCitation() {
     <section class="citation">
       <div class="citation__container">
         <div class="citation__marks"><img src="${A}/quotation-marks-new.png" alt="" /></div>
-        <p class="citation__text">Insérer une citation ou texte</p>
+        <p class="citation__text">« Les images nous embrassent : elles s’ouvrent à nous et se referment sur nous dans la mesure où elles suscitent en nous quelque chose que l’on pourrait nommer une expérience intérieure. »</p>
         <div class="citation__attribution">
           <div class="citation__line"></div>
-          <span class="citation__author">Nom</span>
+          <span class="citation__author">Georges Didi-Huberman</span>
           <div class="citation__line"></div>
         </div>
       </div>
@@ -502,11 +522,49 @@ function renderSectionMaison() {
 }
 
 // ══════════════════════════════════════════
+//  SECTION 10.5 — CAROUSEL ANIMATION
+// ══════════════════════════════════════════
+function renderCarouselAnimation() {
+  const svgLeft = `<svg style="display:block;width:100%;height:100%" fill="none" preserveAspectRatio="none" viewBox="0 0 15.969 15.624"><path d="M2.9085 8.66525L8.41025 14.1667C8.58025 14.3371 8.66617 14.5371 8.668 14.7667C8.67 14.9964 8.58608 15.1971 8.41625 15.3688C8.24625 15.5409 8.04567 15.626 7.8145 15.624C7.58333 15.622 7.38208 15.5361 7.21075 15.3662L0.26075 8.41625C0.16975 8.32425 0.103583 8.22858 0.0622498 8.12925C0.0207498 8.02975 0 7.92425 0 7.81275C0 7.70125 0.0207498 7.596 0.0622498 7.497C0.103583 7.39783 0.16975 7.30242 0.26075 7.21075L7.21675 0.25475C7.39258 0.0849167 7.594 0 7.821 0C8.04783 0 8.24625 0.0849167 8.41625 0.25475C8.58608 0.42875 8.671 0.629499 8.671 0.856999C8.671 1.08467 8.58608 1.28375 8.41625 1.45425L2.9085 6.96175H15.1112C15.3554 6.96175 15.5594 7.04258 15.7233 7.20425C15.8871 7.36592 15.969 7.569 15.969 7.8135C15.969 8.058 15.8871 8.26108 15.7233 8.42275C15.5594 8.58442 15.3554 8.66525 15.1112 8.66525H2.9085Z" fill="var(--fill-0, #0A0A0A)"/></svg>`;
+  const svgRight = `<svg style="display:block;width:100%;height:100%" fill="none" preserveAspectRatio="none" viewBox="0 0 15.963 15.624"><path d="M13.0545 8.66228H0.85175C0.607083 8.66228 0.404 8.58145 0.2425 8.41978C0.0808333 8.25812 0 8.05503 0 7.81053C0 7.56603 0.0808333 7.36295 0.2425 7.20128C0.404 7.03962 0.607083 6.95878 0.85175 6.95878H13.0545L7.55275 1.45728C7.38275 1.28728 7.29667 1.08703 7.2945 0.856535C7.29217 0.625868 7.37608 0.425117 7.54625 0.254284C7.71658 0.0827841 7.91733 -0.00196542 8.1485 3.45823e-05C8.37967 0.00203458 8.58092 0.0879512 8.75225 0.257785L15.7022 7.20778C15.7932 7.29978 15.8594 7.39545 15.9007 7.49478C15.9422 7.59428 15.963 7.69978 15.963 7.81128C15.963 7.92278 15.9422 8.02803 15.9007 8.12703C15.8594 8.2262 15.7932 8.32162 15.7022 8.41328L8.74625 15.3633C8.57042 15.5371 8.369 15.624 8.142 15.624C7.91517 15.624 7.71675 15.5366 7.54675 15.3618C7.37692 15.1916 7.292 14.9929 7.292 14.7655C7.292 14.5384 7.37692 14.3398 7.54675 14.1698L13.0545 8.66228Z" fill="var(--fill-0, #0A0A0A)"/></svg>`;
+
+  return `
+    <section class="carousel-animation" id="carousel-animation">
+      <div class="carousel-animation__header">
+        <div class="carousel-animation__title">
+          ${gradientTitle('Papa et Maman en 1967', 'dark')}
+        </div>
+      </div>
+      <div class="carousel-animation__wrapper" id="carousel-animation-wrapper">
+        <div class="carousel-animation__item" data-index="0">
+          <img src="${carouselAnimationImages[0]}" alt="" />
+          <div class="carousel-animation__frame"></div>
+        </div>
+        <div class="carousel-animation__item" data-index="1">
+          <img src="${carouselAnimationImages[1]}" alt="" />
+          <div class="carousel-animation__frame"></div>
+        </div>
+        <div class="carousel-animation__item" data-index="2">
+          <img src="${carouselAnimationImages[2]}" alt="" />
+          <div class="carousel-animation__frame"></div>
+        </div>
+        
+        <button class="carousel-animation__arrow carousel-animation__arrow--left" id="ca-arrow-left" aria-label="Précédent">
+          <div class="carousel-animation__arrow-icon">${svgLeft}</div>
+        </button>
+        <button class="carousel-animation__arrow carousel-animation__arrow--right" id="ca-arrow-right" aria-label="Suivant">
+          <div class="carousel-animation__arrow-icon">${svgRight}</div>
+        </button>
+      </div>
+    </section>`;
+}
+
+// ══════════════════════════════════════════
 //  SECTION 11 — PETITES SCULPTURES (SLIDER)
 // ══════════════════════════════════════════
 function renderPetitesSculptures() {
   const items = petitesSculptures.map(s =>
-    imgFrame(s.image, s.title)
+    renderCardSmall(s)
   ).join('');
 
   return `
@@ -521,7 +579,7 @@ function renderPetitesSculptures() {
         <button class="slider__arrow slider__arrow--left" aria-label="Précédent">${arrowBackSVG}</button>
         <button class="slider__arrow slider__arrow--right" aria-label="Suivant">${arrowForwardSVG}</button>
       </div>
-      ${sliderDots(3, 'petites-sculptures')}
+      ${sliderDots(Math.ceil(petitesSculptures.length / 2), 'petites-sculptures')}
     </section>`;
 }
 
@@ -533,7 +591,7 @@ function renderEnPleineNature() {
     <section class="en-pleine-nature">
       <div class="en-pleine-nature__container">
         <div class="en-pleine-nature__title">
-          ${gradientTitle('En pleine nature ', 'light')}
+          ${gradientTitle('Jardin', 'light')}
         </div>
         <div class="en-pleine-nature__grid">
           <div class="en-pleine-nature__col">
@@ -573,6 +631,8 @@ function renderHomepage() {
       ${renderSectionEtoile()}
       ${renderCitation()}
       ${renderSectionMaison()}
+      <div class="separation separation--white"></div>
+      ${renderCarouselAnimation()}
       <div class="separation"></div>
       ${renderPetitesSculptures()}
       ${renderEnPleineNature()}
@@ -603,7 +663,7 @@ function initSliders() {
     }
 
     function getMaxIndex() {
-      if (isPetitesSculptures) return 2; // 3 positions (0, 1, 2)
+      if (isPetitesSculptures) return Math.ceil(items.length / 2) - 1;
       const totalWidth = items.length * getItemWidth();
       const calculated = Math.max(0, Math.ceil((totalWidth - visibleWidth) / getItemWidth()));
       // If we have multiple items but calculated is 0, images probably aren't loaded yet
@@ -725,51 +785,64 @@ document.querySelector('#app').innerHTML = `
 // Initialize interactive features after DOM is ready
 initSliders();
 initScrollToSection();
+initCarouselAnimation();
 initAnimations();
 
 // ══════════════════════════════════════════
 //  ANIMATIONS OBSERVER (Snake Section)
 // ══════════════════════════════════════════
 function initAnimations() {
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -20% 0px', // Trigger when spacer enters middle 60% of viewport
-    threshold: 0.1
+  // Removed custom scroll resistance animations as the design was changed to a static quote block
+}
+
+// ══════════════════════════════════════════
+//  CAROUSEL ANIMATION INITIALIZATION
+// ══════════════════════════════════════════
+function initCarouselAnimation() {
+  const wrapper = document.getElementById('carousel-animation-wrapper');
+  if (!wrapper) return;
+
+  const items = Array.from(wrapper.querySelectorAll('.carousel-animation__item'));
+  const btnLeft = document.getElementById('ca-arrow-left');
+  const btnRight = document.getElementById('ca-arrow-right');
+
+  // State: Index 0 is 'main', index 1 is '1', index 2 is '2'
+  // We want the 'main' image (index 0) to be in the center at startup
+  let imagePositions = { left: 1, center: 0, right: 2 };
+
+  // Calculate proportional heights to keep identical aspect-ratio to 700:933 (0.7502)
+  // Sizes scaled by 1.25x compared to the original design
+  // Center: width 413.75px -> height: 551.25px
+  // Left/Right: width 250px -> height: 332.5px
+  const posStyles = {
+    left: { left: '0px', top: '52.5px', width: '250px', height: '332.5px', zIndex: 1 },
+    center: { left: '133.75px', top: '0px', width: '413.75px', height: '551.25px', zIndex: 3 },
+    right: { left: '432.5px', top: '52.5px', width: '250px', height: '332.5px', zIndex: 1 }
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      // Logic: finding which spacer is intersecting
-      // Spacer ID format: "snake-spacer-N"
-      const spacerId = entry.target.id;
-      const index = parseInt(spacerId.split('-').pop(), 10); // 1, 2, 3, or 4
+  function update() {
+    Object.assign(items[imagePositions.left].style, posStyles.left);
+    Object.assign(items[imagePositions.center].style, posStyles.center);
+    Object.assign(items[imagePositions.right].style, posStyles.right);
+  }
 
-      if (entry.isIntersecting) {
-        // Reveal corresponding word and all previous words
-        for (let i = 1; i <= index; i++) {
-          const word = document.querySelector(`.serpent-mots__word--${i}`);
-          if (word) word.classList.add('animate-in');
-        }
-      } else {
-        // If scrolling UP and spacer leaves view, potentially hide *subsequent* words?
-        // User requested "fades in at the same vertical position".
-        // Usually, once revealed, we keep them. But for "scroll resistance", maybe we toggle?
-        // Let's stick to revealing as they scroll down. 
-        // If we want them to disappear when scrolling up, we can remove class.
-        // Let's keep it simple: reveal on scroll down.
-        const word = document.querySelector(`.serpent-mots__word--${index}`);
-        const bounding = entry.boundingClientRect;
-        if (bounding.top > 0) {
-          // Spacer went below view (scrolled up) -> hide word?
-          // If desired, uncomment:
-          // if (word) word.classList.remove('animate-in');
-        }
-      }
-    });
-  }, observerOptions);
-
-  // Observe spacers
-  document.querySelectorAll('.snake-spacer').forEach(spacer => {
-    observer.observe(spacer);
+  btnLeft.addEventListener('click', () => {
+    imagePositions = {
+      left: imagePositions.center,
+      center: imagePositions.right,
+      right: imagePositions.left
+    };
+    update();
   });
+
+  btnRight.addEventListener('click', () => {
+    imagePositions = {
+      left: imagePositions.right,
+      center: imagePositions.left,
+      right: imagePositions.center
+    };
+    update();
+  });
+
+  update();
 }
