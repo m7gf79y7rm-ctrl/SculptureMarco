@@ -9,14 +9,16 @@ const A = '/assets/sculptures';
 const galleryItems = [
   { image: `${A}/Acceuil - Hero  - Gallerie - Le pan.png`, title: 'Le pan' },
   { image: `${A}/Gallerie - Le mur gradient.png`, title: 'Le mur gradient' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Boule de soldat.png`, title: 'Boule de soldat' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chien Fou.png`, title: 'Le chien fou' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chute du mur .png`, title: 'Chute du mur' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Cube penche.png`, title: 'Cube penché' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Don Quichotte.png`, title: 'Don Quichotte' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Maman .png`, title: 'Maman' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Manifs des carrés rouges.png`, title: 'La Manifs des cubes rouges' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Pierre en cage.png`, title: 'Pierre en cage' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Roche sur canettes.png`, title: 'Roche sur canettes' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale Blanche.11.png`, title: 'Spirale blanche' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete.png`, title: 'Spirale tête' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete 1.png`, title: 'Spirale tête 1' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Terre en Cage.png`, title: 'Terre en cage' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Triangle triangulaire.png`, title: 'Triangle triangulaire' },
   { image: `${A}/Acceuil - Projet important - Section L'etoile et l'auto  - Gallerie - Étoile et auto .png`, title: 'Étoile et auto' },
@@ -27,8 +29,9 @@ const galleryItems = [
   { image: `${A}/Gallerie - Cube en gravite.jpeg`, title: 'Cube en gravité' },
   { image: `${A}/Gallerie - L'artefact.png`, title: 'L\'artefact' },
   { image: `${A}/Gallerie - L'immigrante.jpeg`, title: 'L\'immigrante' },
+  { image: `${A}/Gallerie - Jesus de Nazareth.png`, title: 'Jésus de Nazareth' },
   { image: `${A}/Gallerie - La terre en ondulation.png`, title: 'La terre en ondulation' },
-  { image: `${A}/Gallerie - Le canot.png`, title: 'Le canot' },
+  { image: `${A}/Gallerie - Le canot.png`, title: 'Chevalier', interiorImage: `${A}/Gallerie - intérieur du kayak.webp` },
   { image: `${A}/Gallerie - Le monstre.jpeg`, title: 'Le monstre' },
   { image: `${A}/Gallerie - Le pan en feuille.png`, title: 'Le pan en feuille' },
   { image: `${A}/Gallerie - Le sage.png`, title: 'Le sage' },
@@ -37,7 +40,7 @@ const galleryItems = [
 ];
 
 const IMG_LOGO = `${A}/Footer - Logo.png`;
-const IMG_FOOTER = `${A}/Footer - Jesus sculpture exterieure.png`;
+const IMG_FOOTER = `${A}/Footer - Maison du footer.jpeg`;
 
 // ══════════════════════════════════════════
 //  SVG ICONS
@@ -118,12 +121,18 @@ function renderFooter() {
 // ══════════════════════════════════════════
 //  COMPONENT: Gallery Card (reusing style)
 // ══════════════════════════════════════════
-function renderGalleryCard({ image, title }) {
-  // Using card--medium style as requested (from main.js galerieVivante logic but styled for grid)
+function renderGalleryCard({ image, title, interiorImage }) {
+  // Using card--gallery style as requested
+  const interiorHtml = interiorImage ? `
+      <div class="card__interior img-frame" style="position: absolute; top: 20px; left: 20px; width: 135px; height: 142px; z-index: 10;">
+        <img src="${interiorImage}" alt="Intérieur de ${title}" style="object-fit: cover; width: 100%; height: 100%; border-radius: 0;" />
+      </div>` : '';
+
   return `
     <div class="card card--gallery">
       <img class="card__image" src="${image}" alt="${title}" loading="lazy" />
       <div class="card__overlay"></div>
+      ${interiorHtml}
       <div class="card__content">
         <h3 class="card__title">${title}</h3>
       </div>
@@ -143,7 +152,7 @@ function renderGalleryPage() {
   return `
     <main class="galerie-page">
       <div class="galerie-page__header">
-        <h1 class="galerie-page__title">Gallerie</h1>
+        <h1 class="galerie-page__title">Galerie</h1>
         <div class="galerie-page__line"></div>
       </div>
       
@@ -196,24 +205,25 @@ const styles = `
     background-color: var(--color-lynch); /* Lighter line for visibility */
   }
   .galerie-page__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    column-count: 3;
+    column-gap: 2rem;
   }
   @media (max-width: 1024px) {
     .galerie-page__grid {
-      grid-template-columns: repeat(2, 1fr);
+      column-count: 2;
     }
   }
   @media (max-width: 600px) {
     .galerie-page__grid {
-      grid-template-columns: 1fr;
+      column-count: 1;
     }
   }
-  /* Ensure cards look good in grid */
+  /* Ensure masonry cards look good without breaking */
   .galerie-page .card {
-    height: 400px; /* specific height for grid items */
+    height: auto; /* Allow image to dictate height */
     width: 100%;
+    break-inside: avoid; /* Prevent card from splitting across columns */
+    margin-bottom: 2rem; /* Vertical spacing in masonry */
   }
 </style>
 `;

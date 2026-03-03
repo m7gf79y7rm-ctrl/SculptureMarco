@@ -8,7 +8,7 @@ const IMG_CHAMP_DE_CERF = `${A}/Contact - Champ de cerf [].png`;
 
 // Footer (Reused)
 const IMG_LOGO = `${A}/Footer - Logo.png`;
-const IMG_FOOTER = `${A}/Footer - Jesus sculpture exterieure.png`;
+const IMG_FOOTER = `${A}/Footer - Maison du footer.jpeg`;
 
 // Icons (Inline SVG for simplicity as assets are missing)
 const ICON_MAIL = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
@@ -74,8 +74,7 @@ function renderContactSection() {
                 <div class="contact-column__icon">${ICON_MAIL}</div>
                 <div class="contact-column__content">
                     <h2 class="contact-column__label">Courrier</h2>
-                    <p class="contact-column__text">Écrivez à l'atelier</p>
-                    <a href="mailto:contact@projetvitrineartistique.fr" class="contact-column__link">contact@projetvitrineartistique.fr</a>
+                    <a href="mailto:marcplamondon@videotron.ca" class="contact-column__link">marcplamondon@videotron.ca</a>
                 </div>
             </div>
 
@@ -84,25 +83,10 @@ function renderContactSection() {
                 <div class="contact-column__icon">${ICON_PHONE}</div>
                 <div class="contact-column__content">
                     <h2 class="contact-column__label">Appel</h2>
-                    <p class="contact-column__text">Entendre la voix directe</p>
-                    <a href="tel:+3301000000" class="contact-column__link">+33 (0)1 00 00 00</a>
+                    <a href="tel:+15142736629" class="contact-column__link">514-273-6629</a>
                 </div>
             </div>
 
-            <!-- Location Column -->
-            <div class="contact-column contact-column--bordered">
-                <div class="contact-column__icon">${ICON_LOCATION}</div>
-                <div class="contact-column__content">
-                    <h2 class="contact-column__label">Lieu</h2>
-                    <p class="contact-column__text">Sydney, Australie</p>
-                    <div class="contact-column__action">
-                        <a href="#" class="contact-btn">
-                            Voir l'atelier
-                            <span class="contact-btn__icon">${ICON_CHEVRON}</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="contact-page__image"> 

@@ -7,11 +7,11 @@ const A = '/assets/sculptures';
 
 // Portrait and sculpture images
 const IMG_PORTRAIT = `${A}/biographie-portrait.jpg`;
-const IMG_CUBE_SEUL = `${A}/Biographie - Cube seul [].png`;
+const IMG_ATELIER = `${A}/Biographie - L'atelier.webp`;
 
 // Footer
 const IMG_LOGO = `${A}/Footer - Logo.png`;
-const IMG_FOOTER = `${A}/Footer - Jesus sculpture exterieure.png`;
+const IMG_FOOTER = `${A}/Footer - Maison du footer.jpeg`;
 
 // ══════════════════════════════════════════
 //  NAVIGATION DATA
@@ -103,7 +103,7 @@ function renderBibliographie() {
         
         <div class="bibliographie__content">
           <div class="bibliographie__image">
-            <img src="${IMG_CUBE_SEUL}" alt="Cube seul" />
+            <img src="${IMG_ATELIER}" alt="L'atelier" />
           </div>
           <div class="bibliographie__text">
             <p>Écrire le texte bibliographique ici Écrire le texte bibliographique ici Écrire le texte bibliographique ici Écrire le texte bibliographique ici Écrire le texte bibliographique ici Écrire le texte bibliographique ici </p>
