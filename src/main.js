@@ -502,19 +502,19 @@ function renderSectionMaison() {
         </div>
         <div class="section-maison__grid">
           <div class="section-maison__col section-maison__col--left">
-            ${imgBaked(IMG_MAISON_1, 'La Caserne des cauchemars 1', '', 'style="width:299px;margin-bottom:-52px"')}
-            ${imgBaked(IMG_MAISON_2, 'La Caserne des cauchemars 2', '', 'style="width:365px;margin-bottom:-52px"')}
-            ${imgBaked(IMG_MAISON_3, 'La Caserne des cauchemars 3', '', 'style="width:243px"')}
+            ${imgBaked(IMG_MAISON_1, 'La Caserne des cauchemars 1', 'section-maison__img1', 'style="width:299px;margin-bottom:-52px"')}
+            ${imgBaked(IMG_MAISON_2, 'La Caserne des cauchemars 2', 'section-maison__img2', 'style="width:365px;margin-bottom:-52px"')}
+            ${imgBaked(IMG_MAISON_3, 'La Caserne des cauchemars 3', 'section-maison__img3', 'style="width:243px"')}
           </div>
           <div class="section-maison__col section-maison__col--center">
-            ${imgBaked(IMG_MAISON_4, 'La Caserne des cauchemars 4', '', 'style="width:338px;margin-bottom:-20px"')}
-            ${imgBaked(IMG_MAISON_5, 'La Caserne des cauchemars 5', '', 'style="width:471px;margin-bottom:-20px"')}
-            <div style="height:100px"></div>
+            ${imgBaked(IMG_MAISON_4, 'La Caserne des cauchemars 4', 'section-maison__img4', 'style="width:338px;margin-bottom:-20px"')}
+            ${imgBaked(IMG_MAISON_5, 'La Caserne des cauchemars 5', 'section-maison__img5', 'style="width:471px;margin-bottom:-20px"')}
+            <div class="section-maison__spacer" style="height:100px"></div>
           </div>
           <div class="section-maison__col section-maison__col--right">
-            ${imgFrame(IMG_PI_MAISON, 'La Caserne des cauchemars', 'img-frame--lynch-light', 'style="width:426px;height:443px"')}
-            ${imgBaked(IMG_MAISON_6, 'La Caserne des cauchemars 6', '', 'style="width:316px;margin-bottom:-76px;z-index:2;position:relative"')}
-            ${imgBaked(IMG_MAISON_7, 'La Caserne des cauchemars 7', '', 'style="width:265px"')}
+            ${imgFrame(IMG_PI_MAISON, 'La Caserne des cauchemars', 'section-maison__img6 img-frame--lynch-light', 'style="width:426px;height:443px"')}
+            ${imgBaked(IMG_MAISON_6, 'La Caserne des cauchemars 6', 'section-maison__img7', 'style="width:316px;margin-bottom:-76px;z-index:2;position:relative"')}
+            ${imgBaked(IMG_MAISON_7, 'La Caserne des cauchemars 7', 'section-maison__img8', 'style="width:265px"')}
           </div>
         </div>
       </div>
@@ -654,12 +654,12 @@ function initSliders() {
     if (!items.length) return;
 
     let currentIndex = 0;
-    const visibleWidth = slider.offsetWidth;
+    let visibleWidth = slider.offsetWidth;
     const isPetitesSculptures = id === 'petites-sculptures';
 
     function getItemWidth() {
       const gap = parseFloat(getComputedStyle(track).gap) || 0;
-      return items[0].offsetWidth + gap;
+      return (items[0]?.offsetWidth || 0) + gap;
     }
 
     function getMaxIndex() {
@@ -684,26 +684,13 @@ function initSliders() {
       rightArrow.style.pointerEvents = 'auto';
     }
 
-    function updateSlider() {
-      if (isPetitesSculptures) {
-        // Custom offsets for petites-sculptures to match Figma centering
-        const itemW = getItemWidth();
-        // Position 0: first 2 images centered on page
-        // Position 1: shift by ~2 card widths
-        // Position 2: shift by ~4 card widths
-        const offset = currentIndex * itemW * 2;
-        track.style.transform = `translateX(-${offset}px)`;
-      } else {
-        const offset = currentIndex * getItemWidth();
-        track.style.transform = `translateX(-${offset}px)`;
-      }
+    function syncUI() {
       dots.forEach((dot, i) => {
         dot.classList.toggle('slider__dot--active', i === currentIndex);
       });
 
-      // Arrow visibility logic: simple and clear
+      // Arrow visibility logic simple and clear
       if (leftArrow) {
-        // Hide left arrow only when at the very start
         if (currentIndex === 0) {
           leftArrow.style.opacity = '0';
           leftArrow.style.pointerEvents = 'none';
@@ -714,7 +701,6 @@ function initSliders() {
       }
 
       if (rightArrow) {
-        // Hide right arrow only when at the very end
         const maxIdx = getMaxIndex();
         if (currentIndex >= maxIdx) {
           rightArrow.style.opacity = '0';
@@ -724,6 +710,18 @@ function initSliders() {
           rightArrow.style.pointerEvents = 'auto';
         }
       }
+    }
+
+    function updateSlider() {
+      if (isPetitesSculptures) {
+        const itemW = getItemWidth();
+        const offset = currentIndex * itemW * 2;
+        track.scrollTo({ left: offset, behavior: 'smooth' });
+      } else {
+        const offset = currentIndex * getItemWidth();
+        track.scrollTo({ left: offset, behavior: 'smooth' });
+      }
+      syncUI();
     }
 
     if (rightArrow) {
@@ -744,11 +742,70 @@ function initSliders() {
 
     updateSlider();
 
-    // Hide dots beyond max scroll positions
-    const max = getMaxIndex();
-    dots.forEach((dot, i) => {
-      if (i > max) dot.style.display = 'none';
+    // Native scroll event logic for syncing dots (mobile swipe support)
+    track.addEventListener('scroll', () => {
+      const scrollLeft = track.scrollLeft;
+      const itemWidth = getItemWidth();
+      let newIndex = 0;
+
+      if (isPetitesSculptures) {
+        // Offset logic corresponds to itemW * 2
+        newIndex = Math.round(scrollLeft / (itemWidth * 2));
+      } else {
+        // For normal sliders, we might have padding logic, but round is usually fine
+        newIndex = Math.round(scrollLeft / itemWidth);
+      }
+
+      const maxIdx = getMaxIndex();
+      if (newIndex < 0) newIndex = 0;
+      if (newIndex > maxIdx) newIndex = maxIdx;
+
+      if (newIndex !== currentIndex) {
+        currentIndex = newIndex;
+        syncUI(); // ONLY sync UI, do not call format/scrollTo
+      }
     });
+
+    // ==========================================
+    // Resize Listener
+    // ==========================================
+    window.addEventListener('resize', () => {
+      visibleWidth = slider.offsetWidth;
+      updateSlider();
+    });
+
+    // ==========================================
+    // Desktop Mouse Drag to Scroll (Swipe simulation)
+    // ==========================================
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      track.classList.add('active'); // optional styling class
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener('mouseleave', () => {
+      isDown = false;
+      track.classList.remove('active');
+    });
+
+    track.addEventListener('mouseup', () => {
+      isDown = false;
+      track.classList.remove('active');
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 2; // scroll-fast multiplier
+      track.scrollLeft = scrollLeft - walk;
+    });
+
   });
 }
 
@@ -812,12 +869,12 @@ function initCarouselAnimation() {
 
   // Calculate proportional heights to keep identical aspect-ratio to 700:933 (0.7502)
   // Sizes scaled by 1.25x compared to the original design
-  // Center: width 413.75px -> height: 551.25px
-  // Left/Right: width 250px -> height: 332.5px
+  // Center: width 60.62% -> height: 100%
+  // Left/Right: width 36.63% -> height: 60.32%
   const posStyles = {
-    left: { left: '0px', top: '52.5px', width: '250px', height: '332.5px', zIndex: 1 },
-    center: { left: '133.75px', top: '0px', width: '413.75px', height: '551.25px', zIndex: 3 },
-    right: { left: '432.5px', top: '52.5px', width: '250px', height: '332.5px', zIndex: 1 }
+    left: { left: '0%', top: '9.524%', width: '36.63%', height: '60.317%', zIndex: 1 },
+    center: { left: '19.597%', top: '0%', width: '60.623%', height: '100%', zIndex: 3 },
+    right: { left: '63.37%', top: '9.524%', width: '36.63%', height: '60.317%', zIndex: 1 }
   };
 
   function update() {
