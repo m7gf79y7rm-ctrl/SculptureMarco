@@ -760,7 +760,7 @@ h6 {
     }
 
     .card--important .card__title {
-        font-size: var(--text-h2-mobile);
+        font-size: var(--text-h3-mobile);
     }
 
     .card--small {
