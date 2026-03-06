@@ -19,7 +19,7 @@ const IMG_PI_ETOILE = `${A}/Acceuil - Projet important - Section L'etoile et l'a
 const IMG_ETOILE_1 = `${A}/L'étoile et l'auto 1 [].png`;
 const IMG_ETOILE_2 = `${A}/L'étoile et l'auto 2 [].png`;
 const IMG_PI_MAISON = `${A}/Acceuil - Projet important - section La maison  - Gallerie - La maison.png.png`;
-const IMG_MAISON_8 = `${A}/La maison 8.jpeg`;
+const IMG_MAISON_8 = `${A}/La maison 8.JPEG`;
 const IMG_PI_HOMME = `${A}/Acceuil - Projet important - section L'homme  - Gallerie - L'homme.png`;
 
 // Le serpent
