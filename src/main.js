@@ -19,6 +19,7 @@ const IMG_PI_ETOILE = `${A}/Acceuil - Projet important - Section L'etoile et l'a
 const IMG_ETOILE_1 = `${A}/L'étoile et l'auto 1 [].png`;
 const IMG_ETOILE_2 = `${A}/L'étoile et l'auto 2 [].png`;
 const IMG_PI_MAISON = `${A}/Acceuil - Projet important - section La maison  - Gallerie - La maison.png.png`;
+const IMG_MAISON_8 = `${A}/La maison 8.jpeg`;
 const IMG_PI_HOMME = `${A}/Acceuil - Projet important - section L'homme  - Gallerie - L'homme.png`;
 
 // Le serpent
@@ -512,7 +513,7 @@ function renderSectionMaison() {
             <div class="section-maison__spacer" style="height:100px"></div>
           </div>
           <div class="section-maison__col section-maison__col--right">
-            ${imgFrame(IMG_PI_MAISON, 'La Caserne des cauchemars', 'section-maison__img6 img-frame--lynch-light', 'style="width:426px;height:443px"')}
+            ${imgFrame(IMG_MAISON_8, 'La Caserne des cauchemars', 'section-maison__img6 img-frame--lynch-light', 'style="width:426px;height:443px"')}
             ${imgBaked(IMG_MAISON_6, 'La Caserne des cauchemars 6', 'section-maison__img7', 'style="width:316px;margin-bottom:-76px;z-index:2;position:relative"')}
             ${imgBaked(IMG_MAISON_7, 'La Caserne des cauchemars 7', 'section-maison__img8', 'style="width:265px"')}
           </div>

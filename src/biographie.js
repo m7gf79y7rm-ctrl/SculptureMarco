@@ -6,7 +6,7 @@ import './style.css'
 const A = '/assets/sculptures';
 
 // Portrait and sculpture images
-const IMG_PORTRAIT = `${A}/biographie-portrait.jpg`;
+const IMG_PORTRAIT = `${A}/biographie-portrait.jpeg`;
 const IMG_ATELIER = `${A}/Biographie - L'atelier.webp`;
 
 // Footer
