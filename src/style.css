@@ -710,9 +710,6 @@ h6 {
     transition: opacity 0.4s ease;
 }
 
-.card--gallery:hover .card__overlay {
-    opacity: 1;
-}
 
 /* Arrow container and rotation */
 .card--gallery .card__arrow-container {
@@ -733,10 +730,6 @@ h6 {
     transition: all 0.4s ease;
 }
 
-.card--gallery:hover .card__arrow-container {
-    opacity: 1;
-    transform: rotate(45deg);
-}
 
 /* ── Cards Responsive ── */
 @media (max-width: 767px) {

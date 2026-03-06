@@ -73,7 +73,7 @@ function renderFooter() {
           </div>
           <div class="footer__divider"></div>
           <div class="footer__credits">
-            <span>© 2025 Sculpture : Marco</span>
+            <span>2026 fait par Pulse Websites</span>
             ${legal}
           </div>
         </div>

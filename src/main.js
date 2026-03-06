@@ -190,7 +190,7 @@ function renderFooter() {
           </div>
           <div class="footer__divider"></div>
           <div class="footer__credits">
-            <span>© 2025 Sculpture : Marco</span>
+            <span>2026 fait par Pulse Websites</span>
             ${legal}
           </div>
         </div>
@@ -345,7 +345,7 @@ function renderProjetImportant() {
     <section class="projet-important">
       <div class="projet-important__header">
         <div class="projet-important__title">
-          ${gradientTitle('Projet important', 'dark')}
+          ${gradientTitle('Visions majeures', 'dark')}
         </div>
       </div>
       <div class="slider" data-slider-id="projet-important">
@@ -483,7 +483,7 @@ function renderCitation() {
         <p class="citation__text">« Les images nous embrassent : elles s’ouvrent à nous et se referment sur nous dans la mesure où elles suscitent en nous quelque chose que l’on pourrait nommer une expérience intérieure. »</p>
         <div class="citation__attribution">
           <div class="citation__line"></div>
-          <span class="citation__author">Georges Didi-Huberman</span>
+          <span class="citation__author">Zoltan, petit fils</span>
           <div class="citation__line"></div>
         </div>
       </div>
