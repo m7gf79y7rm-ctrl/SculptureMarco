@@ -31,15 +31,15 @@ const galerieVivanteItems = [
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Don Quichotte.png`, title: 'Don Quichotte' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale tete 1.png`, title: 'Fée des glaces' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Terre en Cage.png`, title: 'Migrants du Cosmos' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Pierre en cage.png`, title: 'Liberté' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale Blanche.11.png`, title: 'Curiosité' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Pierre en cage.png`, title: 'Innocente' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Spirale Blanche.11.png`, title: 'Flamme' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Roche sur canettes.png`, title: "L'île morte" },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chute du mur .png`, title: 'Tsunami du Covid' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Triangle triangulaire.png`, title: 'Techno-plante' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Cube penche.png`, title: 'Monolithe' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Chien Fou.png`, title: 'Le chien fou' },
   { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Maman .png`, title: 'Maman' },
-  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Manifs des carrés rouges.png`, title: 'La Manifs des cubes rouges' },
+  { image: `${A}/Acceuil - Gallerie Vivante  - Gallerie - Manifs des carrés rouges.png`, title: 'Manifestant des Carrés rouge' },
 ];
 
 // Section L'Homme
@@ -61,12 +61,12 @@ const IMG_MAISON_7 = `${A}/La maison 7 [].png`;
 // Petites sculptures
 const petitesSculptures = [
   { image: `${A}/Acceuil - Petites sculptures - origine du monde.webp`, title: 'Origine du monde', objectPosition: 'top' },
-  { image: `${A}/Acceuil - Petites sculptures - Oie.png`, title: 'Oie' },
-  { image: `${A}/Acceuil - Petites sculptures - Helice.jpeg`, title: 'Hélice' },
-  { image: `${A}/Acceuil - Petites sculptures - Volant.jpeg`, title: 'Volant' },
-  { image: `${A}/Acceuil - Petites sculptures - Face.jpeg`, title: 'Face' },
-  { image: `${A}/Acceuil - Petites sculptures - Anclume.png`, title: 'Anclume' },
-  { image: `${A}/Acceuil - Petites sculptures - Pistolet 1.1.webp`, title: 'Pistolet' },
+  { image: `${A}/Acceuil - Petites sculptures - Oie.png`, title: 'Nid' },
+  { image: `${A}/Acceuil - Petites sculptures - Helice.jpeg`, title: 'Où vais-je ?' },
+  { image: `${A}/Acceuil - Petites sculptures - Volant.jpeg`, title: 'Les heures glissantes' },
+  { image: `${A}/Acceuil - Petites sculptures - Face.jpeg`, title: 'L’amant piègé' },
+  { image: `${A}/Acceuil - Petites sculptures - Anclume.png`, title: 'Enclumes' },
+  { image: `${A}/Acceuil - Petites sculptures - Pistolet 1.1.webp`, title: 'Kamara' },
   { image: `${A}/Acceuil - Petites sculptures - Guerre de troie.webp`, title: 'Guerre de troie' },
   { image: `${A}/Acceuil - Petites sculptures - Exploration.webp`, title: 'Exploration' },
   { image: `${A}/Acceuil - Petites sculptures - Pogo.webp`, title: 'Pogo', objectPosition: '10% 50%' },
@@ -334,7 +334,7 @@ function renderCardImportant({ image, title, href = '#', scrollTarget = '' }) {
 
 function renderProjetImportant() {
   const cards = [
-    { image: IMG_PI_ETOILE, title: 'Étoile BELAIR-67', scrollTarget: 'section-etoile' },
+    { image: IMG_PI_ETOILE, title: 'Étoile filante ‘67', scrollTarget: 'section-etoile' },
     { image: IMG_PI_MAISON, title: "La Caserne des cauchemars", scrollTarget: 'section-maison' },
     { image: IMG_PI_HOMME, title: "Karma", scrollTarget: 'section-homme' },
     { image: IMG_PI_PAPA_MAMAN, title: 'Papa et Maman en 1967', scrollTarget: 'carousel-animation' },
@@ -346,7 +346,7 @@ function renderProjetImportant() {
     <section class="projet-important">
       <div class="projet-important__header">
         <div class="projet-important__title">
-          ${gradientTitle('Visions majeures', 'dark')}
+          ${gradientTitle('VISIONS MAJEURES', 'dark')}
         </div>
       </div>
       <div class="slider" data-slider-id="projet-important">
@@ -458,9 +458,9 @@ function renderSectionEtoile() {
       <div class="section-etoile__container">
         <div class="section-etoile__left">
           <div class="section-etoile__title-bar">
-            ${gradientTitle("Étoile BELAIR-67", 'dark')}
+            ${gradientTitle("Étoile filante ‘67", 'dark')}
           </div>
-          ${imgFrame(IMG_PI_ETOILE, "Étoile BELAIR-67", 'section-etoile__main-img img-frame--lynch')}
+          ${imgFrame(IMG_PI_ETOILE, "Étoile filante ‘67", 'section-etoile__main-img img-frame--lynch')}
         </div>
         <div class="section-etoile__right">
           ${imgBaked(IMG_ETOILE_1, "Étoile BELAIR-67 détail 1", 'section-etoile__detail1')}
@@ -572,7 +572,7 @@ function renderPetitesSculptures() {
     <section class="petites-sculptures">
       <div class="petites-sculptures__header">
         <div class="petites-sculptures__title">
-          ${gradientTitle('Petites sculptures', 'dark')}
+          ${gradientTitle('Petites oeuvres', 'dark')}
         </div>
       </div>
       <div class="slider" data-slider-id="petites-sculptures">
