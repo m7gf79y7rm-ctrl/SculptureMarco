@@ -631,14 +631,17 @@ h6 {
 
 /* ── Card Nature (En Pleine Nature) ── */
 .card--nature {
-    width: 100%;
+    width: max-content;
+    max-width: 100%;
     height: auto;
+    margin: 0 auto;
     flex-shrink: 0;
 }
 
 .card--nature .card__image {
     position: relative;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
