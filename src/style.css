@@ -629,22 +629,17 @@ h6 {
     text-align: left;
 }
 
-/* ── Card Nature (En Pleine Nature) ── */
-.card--nature {
-    width: max-content;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    flex-shrink: 0;
-}
-
-.card--nature .card__image {
-    position: relative;
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
+/* ── Overlay Bar for En Pleine Nature (Jardin) ── */
+.nature__bottom-bar {
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+    right: 16px;
+    padding: 60px 16px 16px 16px;
+    background: linear-gradient(to bottom, rgba(32, 38, 45, 0) 0%, rgba(32, 38, 45, 0.8) 100%);
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
 }
 
 /* ── Card Medium — No interaction ── */

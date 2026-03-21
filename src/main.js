@@ -587,11 +587,12 @@ function renderPetitesSculptures() {
 // ══════════════════════════════════════════
 //  SECTION 12 — EN PLEINE NATURE
 // ══════════════════════════════════════════
-function renderNatureCard(image, title) {
+function renderNatureCard(image, title, isTall) {
+  const aspectClass = isTall ? 'en-pleine-nature__img--tall' : 'en-pleine-nature__img--wide';
   return `
-    <div class="card card--nature">
-      <img class="card__image" src="${image}" alt="${title}" />
-      <div class="card--small__bottom-bar">
+    <div class="en-pleine-nature__img ${aspectClass} img-frame--no-border">
+      <img src="${image}" alt="${title}" />
+      <div class="nature__bottom-bar">
         <h3 class="card--small__title">${title}</h3>
       </div>
     </div>`;
@@ -606,12 +607,12 @@ function renderEnPleineNature() {
         </div>
         <div class="en-pleine-nature__grid">
           <div class="en-pleine-nature__col">
-            ${renderNatureCard(IMG_NATURE_1, 'Le Gardien')}
-            ${renderNatureCard(IMG_NATURE_2, 'Le Gardien')}
+            ${renderNatureCard(IMG_NATURE_1, 'Le Gardien', true)}
+            ${renderNatureCard(IMG_NATURE_2, 'Le Gardien', false)}
           </div>
           <div class="en-pleine-nature__col">
-            ${renderNatureCard(IMG_NATURE_3, 'Tsunami du Covid')}
-            ${renderNatureCard(IMG_NATURE_4, 'Don Quichotte à Saint-Jean-Port-Joli')}
+            ${renderNatureCard(IMG_NATURE_3, 'Tsunami du Covid', false)}
+            ${renderNatureCard(IMG_NATURE_4, 'Don Quichotte à Saint-Jean-Port-Joli', true)}
           </div>
         </div>
       </div>
