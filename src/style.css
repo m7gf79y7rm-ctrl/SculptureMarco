@@ -629,6 +629,13 @@ h6 {
     text-align: left;
 }
 
+/* ── Card Nature (En Pleine Nature) ── */
+.card--nature {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
 /* ── Card Medium — No interaction ── */
 .card--medium {
     width: 526px;
