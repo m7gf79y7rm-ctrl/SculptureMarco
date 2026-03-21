@@ -1884,23 +1884,17 @@ h6 {
 }
 
 .en-pleine-nature__img {
-    width: 100%;
     position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 .en-pleine-nature__img img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
     display: block;
-}
-
-.en-pleine-nature__img--tall {
-    aspect-ratio: 624 / 640;
-}
-
-.en-pleine-nature__img--wide {
-    aspect-ratio: 640 / 426;
+    width: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* =============================================
