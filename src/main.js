@@ -587,16 +587,6 @@ function renderPetitesSculptures() {
 // ══════════════════════════════════════════
 //  SECTION 12 — EN PLEINE NATURE
 // ══════════════════════════════════════════
-function renderNatureCard(image, title) {
-  return `
-    <div class="en-pleine-nature__img">
-      <img src="${image}" alt="${title}" />
-      <div class="nature__bottom-bar">
-        <h3 class="card--small__title">${title}</h3>
-      </div>
-    </div>`;
-}
-
 function renderEnPleineNature() {
   return `
     <section class="en-pleine-nature">
@@ -605,13 +595,21 @@ function renderEnPleineNature() {
           ${gradientTitle('Jardin', 'light')}
         </div>
         <div class="en-pleine-nature__grid">
-          <div class="en-pleine-nature__col" style="align-items: center;">
-            ${renderNatureCard(IMG_NATURE_1, 'Le Gardien')}
-            ${renderNatureCard(IMG_NATURE_2, 'Le Gardien')}
+          <div class="en-pleine-nature__col">
+            <div class="en-pleine-nature__img en-pleine-nature__img--tall img-frame--no-border">
+              <img src="${IMG_NATURE_1}" alt="En pleine nature 1" />
+            </div>
+            <div class="en-pleine-nature__img en-pleine-nature__img--wide img-frame--no-border">
+              <img src="${IMG_NATURE_2}" alt="En pleine nature 2" />
+            </div>
           </div>
-          <div class="en-pleine-nature__col" style="align-items: center;">
-            ${renderNatureCard(IMG_NATURE_3, 'Tsunami du Covid')}
-            ${renderNatureCard(IMG_NATURE_4, 'Don Quichotte à Saint-Jean-Port-Joli')}
+          <div class="en-pleine-nature__col">
+            <div class="en-pleine-nature__img en-pleine-nature__img--wide img-frame--no-border">
+              <img src="${IMG_NATURE_3}" alt="En pleine nature 3" />
+            </div>
+            <div class="en-pleine-nature__img en-pleine-nature__img--tall img-frame--no-border">
+              <img src="${IMG_NATURE_4}" alt="En pleine nature 4" />
+            </div>
           </div>
         </div>
       </div>
