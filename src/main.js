@@ -73,10 +73,10 @@ const petitesSculptures = [
 ];
 
 // En pleine nature
-const IMG_NATURE_1 = `${A}/En pleine nature 1 [].png`;
-const IMG_NATURE_2 = `${A}/En pleine nature 2 [].png`;
-const IMG_NATURE_3 = `${A}/En pleine nature 3 [].png`;
-const IMG_NATURE_4 = `${A}/En pleine nature 4 [].png`;
+const IMG_NATURE_1 = `${A}/En pleine nature 1 - Le Gardien [].png`;
+const IMG_NATURE_2 = `${A}/En pleine nature 2 - Le Gardien [].png`;
+const IMG_NATURE_3 = `${A}/En pleine nature 3 - Tsunami du Covid [].png`;
+const IMG_NATURE_4 = `${A}/En pleine nature 4 - Don Quichotte [].png`;
 
 // Gallery preview images
 // Gallery preview images (Expanded to include all available gallery items)
