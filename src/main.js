@@ -368,6 +368,11 @@ function renderSerpentEtMots() {
         <div class="serpent-mots__quote-box">
             <div class="citation__marks"><img src="${A}/quotation-marks-new.png" alt="" /></div>
             <p class="serpent-mots__quote-text">« Il n’y a pas de sculpture qui se contente d’être regardée : toutes nous regardent en retour et nous traversent, et, dans ce face-à-face silencieux, elles éveillent en nous des désirs, des souvenirs et des ombres que nous ignorions porter. »</p>
+            <div class="citation__attribution" style="margin-top: 40px;">
+              <div class="citation__line"></div>
+              <span class="citation__author">Zoltan Petitfils</span>
+              <div class="citation__line"></div>
+            </div>
         </div>
         <div class="serpent-mots__right">
             <div class="serpent-mots__title-bar">
@@ -484,7 +489,7 @@ function renderCitation() {
         <p class="citation__text">« Les images nous embrassent : elles s’ouvrent à nous et se referment sur nous dans la mesure où elles suscitent en nous quelque chose que l’on pourrait nommer une expérience intérieure. »</p>
         <div class="citation__attribution">
           <div class="citation__line"></div>
-          <span class="citation__author">Zoltan, petit fils</span>
+          <span class="citation__author">Didi Hurberman</span>
           <div class="citation__line"></div>
         </div>
       </div>
