@@ -2315,6 +2315,49 @@ h6 {
     }
 }
 
+@media (max-width: 767px) {
+    .hero {
+        padding: 40px 20px; /* Reduced side margins (by at least half) */
+        min-height: auto;
+    }
+    
+    .hero__headline {
+        font-size: clamp(32px, 10vw, 44px); /* Scales cleanly to prevent Fracasser text crop */
+        letter-spacing: 4px;
+        padding-bottom: 32px;
+    }
+    
+    .hero__body {
+        gap: 32px;
+    }
+
+    .hero__image-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .hero__le-pan {
+        height: auto;
+        aspect-ratio: 4 / 5; /* Uncrop the picture slightly */
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .hero__title-bar {
+        writing-mode: horizontal-tb;
+        transform: none;
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+        min-height: auto;
+        padding: 16px 20px;
+        font-size: 24px;   /* Reduced title text size */
+        letter-spacing: 3px;
+        justify-content: center;
+        text-align: center;
+    }
+}
 /* =============================================
    PAGE: BIOGRAPHIE
    ============================================= */
