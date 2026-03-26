@@ -370,7 +370,7 @@ function renderSerpentEtMots() {
             <p class="serpent-mots__quote-text">« Il n’y a pas de sculpture qui se contente d’être regardée : toutes nous regardent en retour et nous traversent, et, dans ce face-à-face silencieux, elles éveillent en nous des désirs, des souvenirs et des ombres que nous ignorions porter. »</p>
             <div class="citation__attribution" style="margin-top: 40px;">
               <div class="citation__line"></div>
-              <span class="citation__author">Zoltan Petitfils</span>
+              <span class="citation__author">Zoltan, petit fils</span>
               <div class="citation__line"></div>
             </div>
         </div>
