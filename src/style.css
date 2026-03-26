@@ -2334,7 +2334,7 @@ h6 {
     .hero__image-group {
         flex-direction: column;
         align-items: center;
-        gap: 0;
+        gap: 16px; /* Spacing between image and title bar */
     }
 
     .hero__le-pan {
@@ -2354,8 +2354,10 @@ h6 {
         padding: 16px 20px;
         font-size: 24px;   /* Reduced title text size */
         letter-spacing: 3px;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start; /* Left align text */
+        text-align: left;
+        /* Update to horizontal gradient for the bottom bar since orientation shifted */
+        background: linear-gradient(to right, var(--color-lynch-light), var(--color-lynch));
     }
 }
 /* =============================================
