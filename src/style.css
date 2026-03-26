@@ -2487,8 +2487,9 @@ h6 {
 
 .bibliographie__content {
     display: flex;
+    flex-direction: column;
     gap: 64px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .bibliographie__image {
@@ -2512,8 +2513,25 @@ h6 {
     font-size: 18px;
     line-height: 1.6;
     color: #0a0a0a;
-    width: 402px;
-    white-space: pre-wrap;
+    width: 100%;
+    max-width: 814px;
+}
+
+.bibliographie__text h3 {
+    font-family: 'Gloock', serif;
+    font-size: 32px;
+    color: #000000;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    letter-spacing: 1.5px;
+}
+
+.bibliographie__text h3:first-child {
+    margin-top: 0;
+}
+
+.bibliographie__text p {
+    margin-bottom: 24px;
 }
 
 /* ── Responsive Biographie ── */
