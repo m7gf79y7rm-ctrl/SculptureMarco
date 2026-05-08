@@ -53,7 +53,14 @@ function renderNavbar() {
 
   return `
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
-      <div class="navbar__container">${linksHTML}</div>
+      <div class="navbar__container">
+        <button class="navbar__hamburger" onclick="document.getElementById('nav-menu').classList.toggle('navbar__menu--open')" aria-label="Menu">
+          <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+        </button>
+        <div id="nav-menu" class="navbar__menu">
+          ${linksHTML}
+        </div>
+      </div>
     </nav>`;
 }
 
