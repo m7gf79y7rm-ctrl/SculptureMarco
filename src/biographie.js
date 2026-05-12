@@ -50,7 +50,14 @@ function renderNavbar() {
 
   return `
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
-      <div class="navbar__container">${linksHTML}</div>
+      <div class="navbar__container">
+        <button class="navbar__hamburger" onclick="document.getElementById('nav-menu').classList.toggle('navbar__menu--open')" aria-label="Menu">
+          <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+        </button>
+        <div id="nav-menu" class="navbar__menu">
+          ${linksHTML}
+        </div>
+      </div>
     </nav>`;
 }
 
@@ -118,7 +125,7 @@ function renderBibliographie() {
             on doit aller à ton atelier de soudure, et on va essayer de le reconstruire.<br>
             Yves est très étonné de ma proposition, mais il ne sait pas dire non. Quelques heures plus tard, sous mes instructions, il soude six pièces d’acier après les avoir longuement brossées. Mon bricolage se présente comme un bipède préhistorique parcourant la savane à grande vitesse. J’explique à Yves que nous avons créé un vélociraptor! Ce sera ma première sculpture, qui incarne la Préhistoire de ma vie de sculpteur, de laquelle découlera une trentaine d’ouvres présentes sur le présent site Web, construit à l’aide de dizaines de photos de mon aventure que Zoltan Odabachian et son équipe auront mise en scène dans le présent site Web.</p>
             <h3>Direction.</h3>
-            <p>Auparavant, pendant plusieurs années, je me suis pratiqué avec de l’aquarelle, inspiré par les parcours de la nature, des boisés et des sentiers de la région de Lotbinière, mais jamais comme l’ont fait avant nous les impressionnistes. Plus de 100 ans après eux, la question est toujours la même au moment d’initier un travail: qu’est-ce que l’art? En effet, la révolution impressionniste a pour ferment l’éclosion culturelle d’un nouveau regard sur le monde, qui réinvente à la fois la lumière et les couleurs; comme Degas, et même le mouvement des choses comme Van Gogh l’a fait. (développer?)</p>
+            <p>Auparavant, pendant plusieurs années, je me suis pratiqué avec de l’aquarelle, inspiré par les parcours de la nature, des boisés et des sentiers de la région de Lotbinière, mais jamais comme l’ont fait avant nous les impressionnistes. Plus de 100 ans après eux, la question est toujours la même au moment d’initier un travail: qu’est-ce que l’art? En effet, la révolution impressionniste a pour ferment l’éclosion culturelle d’un nouveau regard sur le monde, qui réinvente à la fois la lumière et les couleurs; comme Degas, et même le mouvement des choses comme Van Gogh l’a fait.</p>
             <p>Pour chaque artiste, le défi est le même, se plonger dans le monde artistique dans lequel il est né, le comprendre, en saisir sa nécessité, puis tenter de rejoindre le langage de son temps. Voilà véritablement le sens de ma démarche et son caractère original, en ce que chaque œuvre est une tentative de fracasser l’espace de mes yeux neufs et de gestes inventifs, peut-être même, si possible, innovateurs, marqué par le minimalisme américain, entre autres de Richard Serra, et l’ouverture radicale des artistes de l’art contemporain énoncé par Marcel Duchamp.</p>
             <p>Bonne visite,</p>
             <p>Marc Plamondon</p>
