@@ -54,14 +54,14 @@ const navLinks = [
   { label: 'Accueil', href: '/', active: false },
   { label: 'Biographie', href: '/biographie.html', active: false },
   { label: 'Contact', href: '/contact.html', active: false },
-  { label: 'Gallerie', href: '/galerie.html', active: true },
+  { label: 'Gallerie', href: '/gallerie.html', active: true },
 ];
 
 const footerLinks = [
   { label: 'Accueil', href: '/' },
   { label: 'Contact', href: '/contact.html' },
   { label: 'Biographie', href: '/biographie.html' },
-  { label: 'Galerie', href: '/galerie.html' },
+  { label: 'Gallerie', href: '/gallerie.html' },
 ];
 
 const footerLegalLinks = [
@@ -157,13 +157,13 @@ function renderGalleryPage() {
   const cardsHTML = galleryItems.map(item => renderGalleryCard(item)).join('');
 
   return `
-    <main class="galerie-page">
-      <div class="galerie-page__header">
-        <h1 class="galerie-page__title">Galerie</h1>
-        <div class="galerie-page__line"></div>
+    <main class="gallerie-page">
+      <div class="gallerie-page__header">
+        <h1 class="gallerie-page__title">Gallerie</h1>
+        <div class="gallerie-page__line"></div>
       </div>
       
-      <div class="galerie-page__grid">
+      <div class="gallerie-page__grid">
         ${cardsHTML}
       </div>
     </main>`;
@@ -185,7 +185,7 @@ document.querySelector('#app').innerHTML = `
 
 const styles = `
 <style>
-  .galerie-page {
+  .gallerie-page {
     padding: 120px 2rem 4rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -196,37 +196,37 @@ const styles = `
     background-attachment: fixed; /* Ensures gradient stays when scrolling */
     min-height: 100vh;
   }
-  .galerie-page__header {
+  .gallerie-page__header {
     margin-bottom: 3rem;
   }
-  .galerie-page__title {
+  .gallerie-page__title {
     font-family: 'Gloock', serif;
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #333333; 
     /* Changed to dark grey as requested "lighter shade of black" */
   }
-  .galerie-page__line {
+  .gallerie-page__line {
     width: 60px;
     height: 4px;
     background-color: var(--color-lynch); /* Lighter line for visibility */
   }
-  .galerie-page__grid {
+  .gallerie-page__grid {
     column-count: 3;
     column-gap: 2rem;
   }
   @media (max-width: 1024px) {
-    .galerie-page__grid {
+    .gallerie-page__grid {
       column-count: 2;
     }
   }
   @media (max-width: 600px) {
-    .galerie-page__grid {
+    .gallerie-page__grid {
       column-count: 1;
     }
   }
   /* Ensure masonry cards look good without breaking */
-  .galerie-page .card {
+  .gallerie-page .card {
     height: auto; /* Allow image to dictate height */
     width: 100%;
     break-inside: avoid; /* Prevent card from splitting across columns */
