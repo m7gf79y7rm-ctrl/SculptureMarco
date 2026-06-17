@@ -114,7 +114,7 @@ function renderFooter() {
           </div>
           <div class="footer__divider"></div>
           <div class="footer__credits">
-            <span>© 2026 fait par Pulse Websites</span>
+            <span>© 2026 · Conçu par <a href="https://pulseoweb.com" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:#2D17E0;">PULSE O</a></span>
             ${legal}
           </div>
         </div>
