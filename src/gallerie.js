@@ -54,14 +54,14 @@ const navLinks = [
   { label: 'Accueil', href: '/', active: false },
   { label: 'Biographie', href: '/biographie.html', active: false },
   { label: 'Contact', href: '/contact.html', active: false },
-  { label: 'Gallerie', href: '/gallerie.html', active: true },
+  { label: 'Galerie', href: '/galerie.html', active: true },
 ];
 
 const footerLinks = [
   { label: 'Accueil', href: '/' },
   { label: 'Contact', href: '/contact.html' },
   { label: 'Biographie', href: '/biographie.html' },
-  { label: 'Gallerie', href: '/gallerie.html' },
+  { label: 'Galerie', href: '/galerie.html' },
 ];
 
 const footerLegalLinks = [

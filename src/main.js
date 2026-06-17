@@ -138,7 +138,7 @@ const navLinks = [
   { label: 'Accueil', href: '#accueil', active: true },
   { label: 'Biographie', href: '/biographie.html', active: false },
   { label: 'Contact', href: '/contact.html', active: false },
-  { label: 'Gallerie', href: '/galerie.html', active: false },
+  { label: 'Galerie', href: '/galerie.html', active: false },
 ];
 
 const footerLinks = [

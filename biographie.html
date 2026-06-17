@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biographie - Marc Plamondon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +20,57 @@
 <body>
     <div id="app"></div>
     <script type="module" src="/src/biographie.js"></script>
+    <style>
+      @keyframes pulseo-ping {
+        0%   { transform: scale(1);   opacity: 0.55; }
+        70%  { transform: scale(2.1); opacity: 0; }
+        100% { transform: scale(2.1); opacity: 0; }
+      }
+      .pulseo-badge {
+        position: fixed; bottom: 16px; right: 16px; z-index: 9999;
+        display: inline-flex; align-items: center; gap: 10px;
+        padding: 9px 16px; border-radius: 999px; text-decoration: none;
+        background: #FFFFFF;
+        border: 1px solid rgba(26,25,24,0.10);
+        box-shadow: 0 4px 18px rgba(20,18,40,0.12), 0 1px 3px rgba(20,18,40,0.08);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        -webkit-font-smoothing: antialiased; user-select: none;
+      }
+      .pulseo-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 26px rgba(20,18,40,0.18), 0 2px 6px rgba(20,18,40,0.10);
+      }
+      .pulseo-label {
+        font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 10px; font-weight: 400; letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(26,25,24,0.45);
+      }
+      .pulseo-word {
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        font-size: 19px; font-weight: 500; letter-spacing: 0.22em;
+        line-height: 1; color: #2D17E0; margin-right: -0.22em;
+      }
+      .pulseo-mark { position: relative; width: 17px; height: 17px; display: inline-flex; }
+      .pulseo-mark svg { display: block; overflow: visible; }
+      .pulseo-ring {
+        position: absolute; inset: 0; margin: auto; width: 17px; height: 17px;
+        border: 1px solid #2D17E0; border-radius: 50%;
+        animation: pulseo-ping 2.6s cubic-bezier(0,0,0.2,1) infinite;
+      }
+      @media (max-width: 480px) {
+        .pulseo-badge { bottom: 12px; right: 12px; padding: 8px 13px; gap: 8px; }
+        .pulseo-word  { font-size: 17px; }
+      }
+    </style>
+    <a class="pulseo-badge" href="https://pulseoweb.com" target="_blank" rel="noopener noreferrer" aria-label="Site conçu par PULSE O — Agence numérique, Montréal">
+      <span class="pulseo-label">Conçu par</span>
+      <span class="pulseo-word">PULSE</span>
+      <span class="pulseo-mark">
+        <span class="pulseo-ring"></span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2D17E0" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="8"></circle><line x1="12" y1="1.5" x2="12" y2="22.5"></line><line x1="1.5" y1="12" x2="22.5" y2="12"></line></svg>
+      </span>
+    </a>
 </body>
 
 </html>

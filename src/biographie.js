@@ -36,7 +36,7 @@ const navLinks = [
   { label: 'Accueil', href: '/', active: false },
   { label: 'Biographie', href: '/biographie.html', active: true },
   { label: 'Contact', href: '/contact.html', active: false },
-  { label: 'Gallerie', href: '/galerie.html', active: false },
+  { label: 'Galerie', href: '/galerie.html', active: false },
 ];
 
 function renderNavbar() {
