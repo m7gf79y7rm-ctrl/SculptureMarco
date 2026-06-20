@@ -9,8 +9,60 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galerie - Marc Sculpture</title>
+    <title>Galerie de sculptures — Marc Plamondon</title>
+    <meta name="description" content="La galerie complète de Marc Plamondon : 30 sculptures en métal et matériaux recyclés. Don Quichotte, Le sage, Jésus de Nazareth, La Caserne des cauchemars et bien plus." />
+    <link rel="canonical" href="https://marcosculpture.com/galerie.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://marcosculpture.com/galerie.html" />
+    <meta property="og:title" content="Galerie de sculptures — Marc Plamondon" />
+    <meta property="og:description" content="La galerie complète de Marc Plamondon : 30 sculptures en métal et matériaux recyclés. Don Quichotte, Le sage, Jésus de Nazareth et bien plus." />
+    <meta property="og:image" content="https://marcosculpture.com/assets/sculptures/Gallerie%20-%20Le%20sage.png" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Galerie de sculptures — Marc Plamondon" />
+    <meta name="twitter:description" content="La galerie complète de Marc Plamondon : 30 sculptures en métal et matériaux recyclés." />
+    <meta name="twitter:image" content="https://marcosculpture.com/assets/sculptures/Gallerie%20-%20Le%20sage.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+      .gallerie-page {
+        padding: 120px 2rem 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      body {
+        background-image: var(--gradient-gallery-page);
+        background-attachment: fixed;
+        min-height: 100vh;
+      }
+      .gallerie-page__header { margin-bottom: 3rem; }
+      .gallerie-page__title {
+        font-family: 'Gloock', serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #333333;
+      }
+      .gallerie-page__line {
+        width: 60px;
+        height: 4px;
+        background-color: var(--color-lynch);
+      }
+      .gallerie-page__grid {
+        column-count: 3;
+        column-gap: 2rem;
+      }
+      @media (max-width: 1024px) {
+        .gallerie-page__grid { column-count: 2; }
+      }
+      @media (max-width: 600px) {
+        .gallerie-page__grid { column-count: 1; }
+      }
+      .gallerie-page .card {
+        height: auto;
+        width: 100%;
+        break-inside: avoid;
+        margin-bottom: 2rem;
+      }
+    </style>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
